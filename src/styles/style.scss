@@ -1,0 +1,50 @@
+@use "./reset.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 25px; */
+    align-items: center;
+    width: 1368px;
+    position: fixed;
+    /* top: -23px; */
+    left: 50%;
+    translate: -50%;
+}
+
+.promotion-band {
+    position: sticky;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+
+    &__content {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        line-height: 18px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 500;
+        animation: slide 3s linear infinite;
+    }
+}
+
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
