@@ -1,4 +1,5 @@
 @use "./reset.scss";
+@use "./variables.scss" as var;
 
 .header {
     display: flex;
@@ -36,9 +37,6 @@
     }
 }
 
-
-
-
 @keyframes slide {
     0% {
         transform: translateX(100%);
@@ -46,5 +44,57 @@
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+.navbar {
+    display: flex;
+    min-height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    background-color: var.$secondary-color;
+    border-bottom: 1px solid var.$primary-color;
+
+    &__logo-container {
+        height: 44px;
+        border-right: #000 1px solid;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+    }
+    
+    &__logo {
+        padding-left: 20px;
+        width: 173px;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-evenly;
+
+        li a {
+            text-decoration: none;
+            color: var.$primary-color;
+            font-size: 22px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+
+    &__cart {
+        position: relative;
+        border: #000 1px solid;
+
+        .cart-icon {
+            max-height: 24px;
+            top: 30px;
+        }
     }
 }
