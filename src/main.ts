@@ -1,24 +1,24 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+const languageModal = document.getElementById("language-modal") as HTMLElement;
+const languageModalContainer = document.getElementById("lm-container") as HTMLElement;
+const languageButtons = document.querySelectorAll(".button_language") as NodeListOf<HTMLButtonElement>;
+const languageButtonClose = document.getElementById("lm-button-close") as HTMLButtonElement;
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+document.addEventListener('DOMContentLoaded', () => {
+  languageButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      languageModal.classList.add("language-modal--show");
+      languageModalContainer.classList.add("language-modal__container--show");
+    });
+  });
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+  languageButtonClose.addEventListener('click', () => {
+    languageModal.classList.add("language-modal--hide");
+    languageModalContainer.classList.add("language-modal__container--hide");
+
+    setTimeout(() => {
+      languageModalContainer.classList.remove("language-modal__container--show", "language-modal__container--hide");
+      languageModal.classList.remove("language-modal--show", "language-modal--hide");
+    }, 1300);
+  })
+
+});
