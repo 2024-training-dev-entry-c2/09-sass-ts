@@ -3,13 +3,10 @@
 @use "./theme";
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+
+  @include variables.position(0,0,0,unset);
+  @include variables.display(center, unset, unset);
   z-index: 1000;
-  display: flex;
-  align-items: center;
   padding: 25px 35px;
   background: transparent;
 
@@ -23,10 +20,9 @@
 }
 
 .menu {
-  display: flex;
+  @include variables.display(center, unset, unset);
   list-style: none;
   gap: 40px;
-  align-items: center;
 
   &__item {
     cursor: pointer;
@@ -38,32 +34,27 @@
   }
 
   &__item-icon {
-    display: flex;
-    height: 32px;
-    width: 100px;
+    @include variables.display(unset, unset, unset, unset);
+    @include variables.size(100px, 32px);
   }
 }
 
 .main {
-  height: 100vh;
+  @include variables.size(unset, 100vh);
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   position: relative;
   mix-blend-mode: lighten;
 
   &__logo-right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50vw;
-    height: 50vw;
+    @include variables.position(0,0,unset,unset);
+    @include variables.size(50vw, 50vw);
     pointer-events: none;
     mix-blend-mode: overlay;
 
     svg {
+      @include variables.size(100%, 100%);
       transform: translate(50%, -20%);
-      width: 100%;
-      height: 100%;
       pointer-events: none;
       path {
         opacity: 100%;
@@ -76,12 +67,10 @@
   &__page-3,
   &__page-4,
   &__page-5 {
-    height: 98vh;
+    @include variables.display(center, center, unset);
+    @include variables.size(unset, 98vh);
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
     padding: 10px;
     border-radius: 1.3rem;
@@ -92,31 +81,26 @@
       margin: 0 auto;
     }
     &--title-big {
+      @include variables.display(unset, unset, column);
       font-size: 6rem;
       line-height: 1;
       font-weight: 560;
-      display: flex;
-      flex-direction: column;
     }
     &--title-medium {
+      @include variables.display(unset, unset, column);
       font-size: 60px;
       line-height: 1;
       font-weight: 560;
-      display: flex;
-      flex-direction: column;
       text-align: left;
     }
 
     &--conteiner {
+      @include variables.display(flex-start, center, column);
       gap: 25px;
-      display: flex;
-      align-content: center;
-      align-items: flex-start;
-      flex-direction: column;
       width: 100%;
     }
     &--content {
-      display: flex;
+      @include variables.display(unset, unset, unset, unset);
     }
     &--description-big {
       font-size: 1.25rem;
@@ -127,10 +111,9 @@
     &-buttons {
       button.main__button-fill,
       button.main__button-empty {
+        @include variables.size(161px, 50px);
         border-radius: 9999px;
-        width: 161px;
-        height: 50px;
-        font-family: "Roboto Mono", serif;
+        font-family: variables.$roboto-mono;
         font-weight: 600;
         border: 0px;
         font-size: 16px;
@@ -148,29 +131,28 @@
       }
       button.main__button-empty {
         background-color: transparent;
-        color: #fff;
+        color: variables.$text-white;
         border: 1px solid #fff;
       }
     }
   }
 
   &__page-1 {
-    background-color: rgba(225, 234, 249, 1);
+    background-color: variables.$bg-default;
 
     &-button {
+      @include variables.size(64px, 64px);
       border-radius: 100%;
       background-color: rgba(28, 83, 189, 1);
-      height: 64px;
-      width: 64px;
       border-color: transparent;
-      color: white;
+      color: variables.$text-white;
       position: relative;
       overflow: hidden;
       border-radius: 50%;
       cursor: pointer;
       svg{
 
-        height: 100%;
+        @include variables.size(25px, 100%);
         &:hover{
           animation: fadeUp 1s;
          
@@ -184,43 +166,37 @@
   }
 
   &__page-2 {
-    background-color: rgba(28, 83, 189, 1);
+    background-color: variables.$bg-blue;
     &--title-medium-small {
       font-size: 20px;
     }
   }
 
   &__page-3 {
-    background-color: rgba(20, 25, 44, 1);
+    background-color: variables.$bg-dark-blue;
   }
 
   &__page-4 {
-    background-color: rgba(0, 138, 146, 1);
+    background-color: variables.$bg-teal;
   }
 
   &__page-5 {
-    background-color: rgba(225, 234, 249, 1);
+    background-color: variables.$bg-default;
     &--container {
-      display: flex;
-      flex-direction: column;
+      @include variables.display(unset, unset, column);
       gap: 30px;
     }
   }
 }
 
 .main-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
+  @include variables.position(0,0,unset,unset);
+  @include variables.size(unset, 100vh);
   padding-right: 35px;
 
   &__container {
-    height: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
+    @include variables.display(start, unset, column, center);
+    @include variables.size(unset, 100%);
     gap: 10px;
     animation-fill-mode: forwards; 
 
@@ -249,26 +225,21 @@
     }
   }
   &__item {
-    display: flex;
+    @include variables.display(center, center, row, flex-end);
     list-style: none;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
     gap: 20px;
     width: 100%;
-    justify-content: flex-end;
     list-style: none;
 
     span {
-      width: 4px;
+      @include variables.size(4px, 25px);
       opacity: 40%;
       mix-blend-mode: color;
       border-radius: 100px;
-      height: 25px;
     }
 
     a {
-      font-family: "Roboto Mono";
+      font-family: variables.$roboto-mono;
       font-size: 14px;
       text-decoration: none;
       visibility: hidden;
@@ -294,24 +265,21 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  @include variables.position(unset,0,0,0);
 
-  display: flex;
-  justify-content: space-between;
+  @include variables.display(unset, unset, unset, space-between);
+
+
+
   padding: 0px 30px 35px 30px;
   background: transparent;
   margin: 21px;
   &__section {
-    display: flex;
-    align-items: center;
+    @include variables.display(center, unset, unset, unset);
   }
 
   &__section-nav {
-    display: flex;
-    align-items: center;
+    @include variables.display(center, unset, unset, unset);
     list-style: none;
     gap: 1.5rem;
 
