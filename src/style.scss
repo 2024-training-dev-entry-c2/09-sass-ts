@@ -345,3 +345,153 @@ main{
 .fa-primary{
   color: #aa9dff;
 }
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+
+  &__gif{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: solid 5px #ffeef3;
+    border-radius: 50%;
+  }
+
+  &__image-top{
+    margin-top: 100px;
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/footer-top.afeb3f99.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &__cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding-top: 150px;
+    background-color: #1d0042;
+    text-align: center;
+    gap: 30px;
+    
+    &__title{
+      font-family:'P22 Mackinac Pro', serif;
+      font-weight: 600;
+      font-size: 56px;
+      text-wrap: pretty;
+      width: 60%;
+      min-width: 750px;
+      background: linear-gradient(79deg, #bb74e9, #f790cb 49%, #fbb4b6 77%, #fed5a6);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__comment{
+      font-size: 20px;
+      font-weight: 600;
+      color: #ada3bb;
+    }
+
+    &__button{
+      font-size: 18px;
+      text-decoration: none;
+      padding: 16px 35px;
+      background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+      background-size: 350%;
+      color: #fff;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #0000008f;
+      border-radius: 8px;
+      box-shadow: 1px 5px 4px #00000018;
+      transition: background-size 0.2s ease-in-out;
+  
+      &:hover{
+        filter: brightness(110%);
+        background-size: 100%;
+      }
+    }
+
+    &__image{
+      width: 45%;
+    }
+  }
+
+  &__options{
+    padding-top: 50px;
+    padding-right: 40px;
+    background-color: #1d0042;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 110px;
+
+    &__title{
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff97;  
+    }
+  }
+
+  &__menu{
+    margin-top: 20px;
+    list-style: none;
+    line-height: 2.5;
+    font-size: 14px;
+    font-weight: 500;
+
+    &__link{
+      text-decoration: none;
+      color: #fff;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  &__copyright{
+    width: 100%;
+    padding: 50px 0;
+    background-color: #1d0042;
+    text-align: center;
+    color: #ffffff97;  
+    font-size: 16px;    
+  }
+
+  &__language{
+    width: 100%;
+    padding: 0 20%;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: end;
+    background-color: #1d0042;
+
+    &__button{
+      padding: 0;
+      display: flex;
+      align-items: end;
+      height: 21px;
+      gap: 10px;
+      color: #ffffff97;
+      font-size: 16px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover{
+        color: #fff;  
+      }
+      
+      & svg{
+        width: 15px;   
+        vertical-align: middle;
+      }
+    }
+  }
+}
