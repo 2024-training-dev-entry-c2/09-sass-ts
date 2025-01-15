@@ -1,0 +1,88 @@
+@use './reset';
+@use './fonts.scss';
+
+html{
+  font-family: 'Eudoxus Sans', sans-serif;
+}
+
+.header{
+  background-color: #ffffffee;
+  width: 100vw;  
+  position: fixed;
+  top: 0;
+  left: 50%;
+  translate: -50%;
+  z-index: 1;
+}
+
+.navigation{  
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 1368px;
+  margin: 0 auto;   
+
+  &__link{
+    & img{
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+.menu{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  
+  &__item{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  &__button{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333333;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover{
+      color: #000;  
+    }
+
+    & i{
+      height: 16px;
+    }
+    & svg{
+      width: 16px;      
+    }
+  }
+
+  &__link{
+    color: #333333;
+    text-decoration: none;
+    &:hover{
+      color: #000;
+    }
+  }
+
+  &__button-try{
+    text-decoration: none;
+    font-weight: 600;
+    color: #333333;
+    padding: 6px 14px;
+    border: solid 1px #b3b3b3;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px #00000018;
+    &:hover{
+      color: #000;
+    }
+  }
+}
