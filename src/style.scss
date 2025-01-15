@@ -287,3 +287,61 @@ main{
     box-shadow: 0 3px 4px #00000018;
   }
 }
+
+.cards{
+  margin: 85px 210px;
+  min-width: 1346px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  color: #3c3838;
+
+  &__container{
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__icon{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    & svg{
+      height: 30px;
+    }
+  }
+
+  &__title{
+    font-family:'P22 Mackinac Pro', serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 15px;
+    border-left: solid 2px #dcd6fb;
+  }
+
+  &__description{
+    padding-left: 15px;
+    font-size: 14px;
+  }
+
+  &__link{
+    text-decoration: none;
+    padding-left: 15px;
+    color: #2b0aff;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.fa-secondary{
+  color: #dcd6fb;
+}
+
+.fa-primary{
+  color: #aa9dff;
+}
