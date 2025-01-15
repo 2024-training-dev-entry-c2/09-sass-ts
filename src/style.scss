@@ -5,13 +5,15 @@ html{
   font-family: 'Eudoxus Sans', sans-serif;
 }
 
+body{
+  //background: linear-gradient(#faf2e9, rgba(250, 242, 233, 0));
+}
+
 .header{
   background-color: #ffffffee;
   width: 100vw;  
   position: fixed;
   top: 0;
-  left: 50%;
-  translate: -50%;
   z-index: 1;
 }
 
@@ -83,6 +85,64 @@ html{
     box-shadow: 1px 1px 2px #00000018;
     &:hover{
       color: #000;
+    }
+  }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#faf2e9, rgba(250, 242, 233, 0));
+}
+
+.hero{
+  padding-top: 240px;
+  max-width: 1368px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+
+  &__title{
+    font-size: 76px;
+    text-wrap: pretty;
+    max-width: 50%;
+    background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__subtitle{
+    font-size: 68px;
+    color: #333333;
+  }
+
+  &__description{
+    font-size: 18px;
+    color: #5c5c5b;
+    text-wrap: balance;
+  }
+
+  &__button{
+    text-decoration: none;
+    padding: 20px 35px;
+    background: linear-gradient(79deg,#2b0aff,#4614f0 30%,#6620df 49%, #9834c2);
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #0000008f;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #00000018;
+  }
+
+  &__figure{
+    margin-top: 100px;
+
+    & video{
+      max-width: 95%;
+      border-radius: 10px;
+      box-shadow: 2px 30px 40px #00000018;
     }
   }
 }
