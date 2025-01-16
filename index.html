@@ -24,9 +24,9 @@
             <a class="navigation__link" href="#" aria-label="Gamma Home">
                 <img src="images/gamma-logo-black.5914e71f.svg" alt="Gamma Home" loading="lazy">
             </a>
-            <menu class="menu">
+            <menu role="menu" class="menu">
                 <li class="menu__item">
-                    <button class="menu__button button_language" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu" id="language-button">
+                    <button class="menu__button button_language" aria-label="Select language" aria-haspopup="true" aria-expanded="false" aria-controls="language-modal" id="language-button">
                         <i aria-hidden="true">
                             <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="globe" class="svg-inline--fa fa-globe " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path fill="currentColor" d="M256 464c7.4 0 27-7.2 47.6-48.4c8.8-17.7 16.4-39.2 22-63.6H186.4c5.6 24.4 13.2 45.9 22 63.6C229 456.8 248.6 464 256 464zM178.5 304h155c1.6-15.3 2.5-31.4 2.5-48s-.9-32.7-2.5-48h-155c-1.6 15.3-2.5 31.4-2.5 48s.9 32.7 2.5 48zm7.9-144H325.6c-5.6-24.4-13.2-45.9-22-63.6C283 55.2 263.4 48 256 48s-27 7.2-47.6 48.4c-8.8 17.7-16.4 39.2-22 63.6zm195.3 48c1.5 15.5 2.2 31.6 2.2 48s-.8 32.5-2.2 48h76.7c3.6-15.4 5.6-31.5 5.6-48s-1.9-32.6-5.6-48H381.8zm58.8-48c-21.4-41.1-56.1-74.1-98.4-93.4c14.1 25.6 25.3 57.5 32.6 93.4h65.9zm-303.3 0c7.3-35.9 18.5-67.7 32.6-93.4c-42.3 19.3-77 52.3-98.4 93.4h65.9zM53.6 208c-3.6 15.4-5.6 31.5-5.6 48s1.9 32.6 5.6 48h76.7c-1.5-15.5-2.2-31.6-2.2-48s.8-32.5 2.2-48H53.6zM342.1 445.4c42.3-19.3 77-52.3 98.4-93.4H374.7c-7.3 35.9-18.5 67.7-32.6 93.4zm-172.2 0c-14.1-25.6-25.3-57.5-32.6-93.4H71.4c21.4 41.1 56.1 74.1 98.4 93.4zM256 512A256 256 0 1 1 256 0a256 256 0 1 1 0 512z"></path>
@@ -43,8 +43,8 @@
         </nav>
     </header>
     <main>  
-        <section class="language-modal" id="language-modal">
-            <div class="language-modal__container" id="lm-container" role="menu" aria-labelledby="language-button">
+        <dialog class="language-modal" id="language-modal" role="dialog" aria-labelledby="language-modal__title">
+            <div class="language-modal__container" id="lm-container" role="menu">
                 <header class="language-modal__header">
                     <h3 class="language-modal__title">Choose language</h3>
                     <button class="language-modal__button-close" id="lm-button-close" aria-label="Close language selector">
@@ -55,7 +55,7 @@
                         </i>
                     </button>
                 </header>
-                <div class="language-modal__content" role="menuitem">
+                <div class="language-modal__content">
                     <button class="language-modal__button language-modal__button--active">English</button>
                     <button class="language-modal__button">Shqip</button>
                     <button class="language-modal__button">Bosanski</button>
@@ -74,9 +74,30 @@
                     <button class="language-modal__button">हिन्दी</button>
                     <button class="language-modal__button">Magyar</button>
                     <button class="language-modal__button">Bahasa Indonesia</button>
+                    <button class="language-modal__button">Italiano</button>
+                    <button class="language-modal__button">日本語</button>
+                    <button class="language-modal__button">ಕನ್ನಡ</button>
+                    <button class="language-modal__button">한국어</button>
+                    <button class="language-modal__button">Latviešu</button>
+                    <button class="language-modal__button">Lietuvių</button>
+                    <button class="language-modal__button">Norsk</button>
+                    <button class="language-modal__button">Polski</button>
+                    <button class="language-modal__button">Português (Brasil)</button>
+                    <button class="language-modal__button">Română</button>
+                    <button class="language-modal__button">Русский</button>
+                    <button class="language-modal__button">Српски</button>
+                    <button class="language-modal__button">Slovenščina</button>
+                    <button class="language-modal__button">Español</button>
+                    <button class="language-modal__button">Svenska</button>
+                    <button class="language-modal__button">Tagalog</button>
+                    <button class="language-modal__button">ไทย</button>
+                    <button class="language-modal__button">Türkçe</button>
+                    <button class="language-modal__button">Українська</button>
+                    <button class="language-modal__button">O‘zbek</button>
+                    <button class="language-modal__button">Tiếng Việt</button>
                 </div>
             </div>
-        </section>
+        </dialog>
 
         <section class="hero" aria-labelledby="hero-title">
             <h1 class="hero__title" id="hero-title">A new medium for presenting ideas.</h1>
@@ -84,7 +105,7 @@
             <p class="hero__description">Beautiful presentations, documents, and websites.<br> No design or coding skills required.</p>
             <a class="hero__button" href="#" aria-label="Sign up for a free account to create presentations, documents, and websites with AI">Sign up for free</a>
             <figure class="hero__figure">
-                <video src="images/Introducing Gamma_ Presentations, Websites, and More, powered by AI.mp4" autoplay muted playsinline controls aria-describedby="video-1-desc"></video>            
+                <video src="images/Introducing Gamma_ Presentations, Websites, and More, powered by AI.mp4" autoplay muted playsinline controls loop aria-describedby="video-1-desc"></video>            
                 <figcaption id="video-1-desc">
                     A video introducing Gamma's features: presentations, websites, and documents created with the help of AI.
                 </figcaption>
@@ -92,15 +113,15 @@
         </section>
 
         <section class="feature-section">
-            <article class="feature-section__article" aria-labelledby="presentations-title">
+            <article class="feature-section__article" aria-label="Article describing features and testimonial of Gamma">
                 <div class="feature-section__column">
                     <header class="feature-section__header">
                         <small class="feature-section__tagline">Start inspired—every time</small>
-                        <h2 class="feature-section__title" id="presentations-title">Create unlimited presentations, websites, and more—in seconds</h2>
+                        <h2 class="feature-section__title">Create unlimited presentations, websites, and more—in seconds</h2>
                     </header>
                     <div class="feature-section__content">
                         <p class="feature-section__text">Everything you need to <strong>quickly create and refine content</strong> with advanced AI.</p>
-                        <blockquote class="testimonial" aria-labelledby="testimonial-text testimonial-author">
+                        <blockquote class="testimonial" role="blockquote" aria-labelledby="testimonial-text testimonial-author">
                             <p class="testimonial__text" id="testimonial-text">Gamma allows me to package up information <b>in ways I can't with slides</b>,while still creating good flow for my presentations.</p>
                             <div class="testimonial__container">
                                 <img class="testimonial__image" src="images/annmarie.jpg" alt="Portrait of Ann Marie">
@@ -117,7 +138,7 @@
                 </figure>
             </article>
     
-            <article class="feature-section__article">
+            <article class="feature-section__article" aria-label="Article describing features and testimonial of AI Gamma">
                 <div class="feature-section__column">
                     <header class="feature-section__header">
                         <small class="feature-section__tagline">Get help whenever you need it</small>
@@ -134,11 +155,11 @@
                             <span role="img">🪄</span> <p>Quickly <strong>rewrite or autocomplete</strong> your content</p>            
                         </div> 
                     </div>
-                    <blockquote class="testimonial">
-                        <p class="testimonial__text">Creating polished slides gets really tedious, especially aligning boxes and keeping things on-brand. With Gamma, I can get things done <b>so much faster.</b></p>
+                    <blockquote class="testimonial" role="blockquote" aria-labelledby="testimonial-text-2 testimonial-author-2">
+                        <p class="testimonial__text" id="testimonial-text-2">Creating polished slides gets really tedious, especially aligning boxes and keeping things on-brand. With Gamma, I can get things done <b>so much faster.</b></p>
                         <div class="testimonial__container">
                             <img class="testimonial__image" src="images/John-Witt.jpg" alt="Portrait of John">
-                            <p class="testimonial__author">John, Co-founder & CEO at Stotles</p>
+                            <p class="testimonial__author" id="testimonial-author-2">John, Co-founder & CEO at Stotles</p>
                         </div>
                     </blockquote>
                 </div>
@@ -150,7 +171,7 @@
                 </figure>
             </article>
     
-            <article class="feature-section__article">
+            <article class="feature-section__article" aria-label="Article describing features and testimonial of websites created with Gamma">
                 <div class="feature-section__column">
                     <header class="feature-section__header">
                         <small class="feature-section__tagline">Design brilliance, no coding skills required</small>
@@ -167,11 +188,11 @@
                             <span role="img">🖼️</span> <p>Jumpstart your projects with versatile <strong>pre-made templates</strong></p>            
                         </div> 
                     </div>
-                    <blockquote class="testimonial">
-                        <p class="testimonial__text">Notion x Canva is the best way to think about Gamma. It's just <b>so nice to use</b>!</p>
+                    <blockquote class="testimonial" role="blockquote" aria-labelledby="testimonial-text-3 testimonial-author-3">
+                        <p class="testimonial__text" id="testimonial-text-3">Notion x Canva is the best way to think about Gamma. It's just <b>so nice to use</b>!</p>
                         <div class="testimonial__container">
                             <img class="testimonial__image" src="images/Matthias.jpg" alt="Portrait of Matthias">
-                            <p class="testimonial__author">Matthias, Senior Strategy Consultant at ODALINE</p>
+                            <p class="testimonial__author" id="testimonial-author-3">Matthias, Senior Strategy Consultant at ODALINE</p>
                         </div>
                     </blockquote>
                 </div>
@@ -183,7 +204,7 @@
                 </figure>
             </article>
     
-            <article class="feature-section__article">
+            <article class="feature-section__article" aria-label="Article describing features and testimonial of restyle settings in Gamma">
                 <div class="feature-section__column">
                     <header class="feature-section__header">
                         <small class="feature-section__tagline">Seamless integration, effortless output</small>
@@ -200,11 +221,11 @@
                             <span role="img">📤</span> <p>Export unlimited <strong>PDF and PPT files</strong> instantly</p>            
                         </div> 
                     </div>
-                    <blockquote class="testimonial">
-                        <p class="testimonial__text">We've avoided PowerPoint decks at all costs at our agency, but Gamma offered us a <b>fresh alternative</b> that we love to share with potential clients. Polished and adaptable. We love it!</p>
+                    <blockquote class="testimonial" role="blockquote" aria-labelledby="testimonial-text-4 testimonial-author-4">
+                        <p class="testimonial__text" id="testimonial-text-4">We've avoided PowerPoint decks at all costs at our agency, but Gamma offered us a <b>fresh alternative</b> that we love to share with potential clients. Polished and adaptable. We love it!</p>
                         <div class="testimonial__container">
                             <img class="testimonial__image" src="images/Emilie.jpg" alt="Portrait of Emilie">
-                            <p class="testimonial__author">Emilie, Founder & Principal at Six Eastern</p>
+                            <p class="testimonial__author" id="testimonial-author-4">Emilie, Founder & Principal at Six Eastern</p>
                         </div>
                     </blockquote>
                 </div>
@@ -216,7 +237,7 @@
                 </figure>
             </article>
     
-            <article class="feature-section__article">
+            <article class="feature-section__article" aria-label="Article describing features and testimonial of collaborating and sharing documents in Gamma">
                 <div class="feature-section__column">
                     <header class="feature-section__header">
                         <small class="feature-section__tagline">Easy to share and publish</small>
@@ -236,11 +257,11 @@
                             <span role="img">💬</span> <p>Connect and collaborate in <strong>real-time</strong></p>            
                         </div> 
                     </div>
-                    <blockquote class="testimonial">
-                        <p class="testimonial__text">I'm not a slide deck artist - Gamma makes it super easy for me to convert my documents into engaging presentations for company all hands, and takes me <b>10x less time</b> than fiddling about with pixels on slides. Such a time saver.</p>
+                    <blockquote class="testimonial" role="blockquote" aria-labelledby="testimonial-text-5 testimonial-author-5">
+                        <p class="testimonial__text" id="testimonial-text-5">I'm not a slide deck artist - Gamma makes it super easy for me to convert my documents into engaging presentations for company all hands, and takes me <b>10x less time</b> than fiddling about with pixels on slides. Such a time saver.</p>
                         <div class="testimonial__container">
                             <img class="testimonial__image" src="images/amelia.jpg" alt="Portrait of Amelia">
-                            <p class="testimonial__author">Amelia, Co-founder & CEO at <a href="#">Honeycomb</a></p>
+                            <p class="testimonial__author" id="testimonial-author-5">Amelia, Co-founder & CEO at <a href="#">Honeycomb</a></p>
                         </div>
                     </blockquote>
                 </div>
@@ -309,8 +330,8 @@
         </section>        
     </main>
     <footer class="footer">
-        <img class="footer__gif" src="images/gamma-animation.f6269417.gif" alt="">
-        <div class="footer__image-top"></div>
+        <img class="footer__gif" src="images/gamma-animation.f6269417.gif" alt="Animation showing a gamma transition">
+        <div class="footer__image-top" alt="Illustration of an astronaut waiting for a door to open"></div>
         <section class="footer__cta">        
             <h1 class="footer__cta__title">Open the door to a new universe</h1>
             <small class="footer__cta__comment">More visual than a doc. More collaborative than a slide deck. More interactive than a video.</small>
@@ -318,10 +339,10 @@
             <img class="footer__cta__image" src="images/door.ba4427b3.png" alt="">
         </section>
         <section class="footer__options">
-            <img class="footer__options__logo" src="images/gamma-logo-white.9613e68b.svg" alt="">
+            <img class="footer__options__logo" src="images/gamma-logo-white.9613e68b.svg" alt="Gamma Logotype">
             <div>
                 <span class="footer__options__title">Product</span>
-                <ul class="footer__menu">
+                <ul role="menu" class="footer__menu">
                     <li><a class="footer__menu__link" href="#">Help</a></li>
                     <li><a class="footer__menu__link" href="#">Change log</a></li>
                     <li><a class="footer__menu__link" href="#">Pricing</a></li>
@@ -333,7 +354,7 @@
             </div>
             <div>
                 <span class="footer__options__title">Company</span>
-                <ul class="footer__menu">
+                <ul role="menu" class="footer__menu">
                     <li><a class="footer__menu__link" href="#">Careers</a></li>
                     <li><a class="footer__menu__link" href="#">Team</a></li>
                     <li><a class="footer__menu__link" href="#">Terms of Service</a></li>
@@ -344,7 +365,7 @@
             </div>
             <div>
                 <span class="footer__options__title">Follow us</span>
-                <ul class="footer__menu">
+                <ul role="menu" class="footer__menu">
                     <li><a class="footer__menu__link" href="#">Twitter</a></li>
                     <li><a class="footer__menu__link" href="#">Instagram</a></li>
                     <li><a class="footer__menu__link" href="#">LinkedIn</a></li>
@@ -357,7 +378,7 @@
             <small>&copy; 2005 Gamma Tech, Inc.</small>
         </div>
         <div class="footer__language">
-            <button class="footer__language__button button_language" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu-2" id="language-button-2">
+            <button class="footer__language__button button_language" aria-label="Select language" aria-haspopup="true" aria-expanded="false" aria-controls="language-modal" id="language-button-2">
                 <i aria-hidden="true">
                     <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="globe" class="svg-inline--fa fa-globe " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="currentColor" d="M256 464c7.4 0 27-7.2 47.6-48.4c8.8-17.7 16.4-39.2 22-63.6H186.4c5.6 24.4 13.2 45.9 22 63.6C229 456.8 248.6 464 256 464zM178.5 304h155c1.6-15.3 2.5-31.4 2.5-48s-.9-32.7-2.5-48h-155c-1.6 15.3-2.5 31.4-2.5 48s.9 32.7 2.5 48zm7.9-144H325.6c-5.6-24.4-13.2-45.9-22-63.6C283 55.2 263.4 48 256 48s-27 7.2-47.6 48.4c-8.8 17.7-16.4 39.2-22 63.6zm195.3 48c1.5 15.5 2.2 31.6 2.2 48s-.8 32.5-2.2 48h76.7c3.6-15.4 5.6-31.5 5.6-48s-1.9-32.6-5.6-48H381.8zm58.8-48c-21.4-41.1-56.1-74.1-98.4-93.4c14.1 25.6 25.3 57.5 32.6 93.4h65.9zm-303.3 0c7.3-35.9 18.5-67.7 32.6-93.4c-42.3 19.3-77 52.3-98.4 93.4h65.9zM53.6 208c-3.6 15.4-5.6 31.5-5.6 48s1.9 32.6 5.6 48h76.7c-1.5-15.5-2.2-31.6-2.2-48s.8-32.5 2.2-48H53.6zM342.1 445.4c42.3-19.3 77-52.3 98.4-93.4H374.7c-7.3 35.9-18.5 67.7-32.6 93.4zm-172.2 0c-14.1-25.6-25.3-57.5-32.6-93.4H71.4c21.4 41.1 56.1 74.1 98.4 93.4zM256 512A256 256 0 1 1 256 0a256 256 0 1 1 0 512z"></path>

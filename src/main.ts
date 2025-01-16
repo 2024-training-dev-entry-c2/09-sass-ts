@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       languageModalContainer.classList.remove("language-modal__container--show", "language-modal__container--hide");
       languageModal.classList.remove("language-modal--show", "language-modal--hide");
-    }, 1300);
+    }, 1000);
   })
 
 });
