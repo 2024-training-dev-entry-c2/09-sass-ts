@@ -46,6 +46,21 @@
         url("./assets/fonts/ppneuemontreal-bold.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Apple Garmond Light";
+    font-style: normal;
+    font-weight: lighter;
+    src: local("Apple Garmond Light"),
+        url("public/fonts/AppleGaramond-Light.ttf") format("truetype");
+}
+
+.sliding-band {
+    p {
+        font-family: "Apple Garmond Light", serif;
+        font-weight: 200;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
