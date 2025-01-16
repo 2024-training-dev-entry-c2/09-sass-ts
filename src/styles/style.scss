@@ -15,8 +15,8 @@
 
 .promotion-band {
     position: sticky;
-    background-color: #000;
-    color: #fff;
+    background-color: var.$primary-color;
+    color: var.$secondary-color;
     overflow: hidden;
     margin: 0;
     text-align: center;
@@ -33,7 +33,7 @@
     &__text {
         font-size: 12px;
         font-weight: 500;
-        animation: slide 3s linear infinite;
+        animation: slide 5s linear infinite;
     }
 }
 
@@ -61,7 +61,7 @@
         height: 44px;
         align-items: center;
         justify-content: center;
-        border-right: #000 1px solid;
+        border-right: var.$primary-color 1px solid;
         flex: 1;
         padding-left: 15px;
         padding-right: 30px;
@@ -93,7 +93,7 @@
 
     &__cart {
         position: relative;
-        border-left: #000 1px solid;
+        border-left: var.$primary-color 1px solid;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,18 +129,18 @@
     &__content-right {
         line-height: 43px;
         padding: 0px 22px 0px 25px;
-        border: #fff 1px solid;
+        border: var.$secondary-color 1px solid;
         position: absolute;
         bottom: 54px;
         left: 50px;
-        color: #fff;
+        color: var.$secondary-color;
         border-radius: 50px;
         text-align: center;
     }
 
     &__content-link {
         font-size: 20px;
-        color: #fff;
+        color: var.$secondary-color;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 500;
@@ -151,7 +151,7 @@
         bottom: 54px;
         right: 3%;
         font-size: 14px;
-        color: #fff;
+        color: var.$secondary-color;
         font-weight: 500;
         text-align: left;
         max-width: 25vw;
@@ -160,4 +160,33 @@
         line-height: 18.2px;
     }
 
+}
+
+.sliding-band {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var.$secondary-color;
+    padding: 10px 0;
+
+    &__content {
+        display: inline-block;
+        animation: slide 25s linear infinite;
+    }
+
+    p {
+        display: inline-block;
+        font-size: 40px;
+        color: var.$primary-color;
+        letter-spacing: -0.01em;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
 }
