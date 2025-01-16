@@ -321,9 +321,6 @@ body {
   color: #fff;
   border: 1px solid #fff;
 }
-.main__page-1 {
-  background-color: rgb(225, 234, 249);
-}
 .main__page-1-button {
   width: 64px;
   height: 64px;
@@ -346,20 +343,8 @@ body {
 .main__page-1-button:hover {
   opacity: 0.8;
 }
-.main__page-2 {
-  background-color: rgb(28, 83, 189);
-}
 .main__page-2--title-medium-small {
   font-size: 20px;
-}
-.main__page-3 {
-  background-color: rgb(20, 25, 44);
-}
-.main__page-4 {
-  background-color: rgb(0, 138, 146);
-}
-.main__page-5 {
-  background-color: rgb(225, 234, 249);
 }
 .main__page-5--container {
   display: flex;

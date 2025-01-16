@@ -138,7 +138,7 @@
   }
 
   &__page-1 {
-    background-color: variables.$bg-default;
+    // background-color: variables.$bg-default;
 
     &-button {
       @include variables.size(64px, 64px);
@@ -166,22 +166,22 @@
   }
 
   &__page-2 {
-    background-color: variables.$bg-blue;
+    // background-color: variables.$bg-blue;
     &--title-medium-small {
       font-size: 20px;
     }
   }
 
-  &__page-3 {
-    background-color: variables.$bg-dark-blue;
-  }
+  // &__page-3 {
+  //   background-color: variables.$bg-dark-blue;
+  // }
 
-  &__page-4 {
-    background-color: variables.$bg-teal;
-  }
+  // &__page-4 {
+  //   background-color: variables.$bg-teal;
+  // }
 
   &__page-5 {
-    background-color: variables.$bg-default;
+    // background-color: variables.$bg-default;
     &--container {
       @include variables.display(unset, unset, column);
       gap: 30px;
