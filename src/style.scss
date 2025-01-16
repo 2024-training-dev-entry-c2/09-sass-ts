@@ -1,6 +1,7 @@
 @use './reset';
 @use './fonts.scss';
 @use './mixins.scss' as mx;
+@use './animations.scss';
 
 html{
   font-family: mx.$font-primary;
@@ -110,6 +111,8 @@ main{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 1;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 0.5s;
   }
 
   &__subtitle{
@@ -117,6 +120,8 @@ main{
     @include mx.text-properties(normal,normal,-2px);
     color: mx.$color-gray-primary;
     z-index: 1;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 0.5s;
   }
 
   &__description{
@@ -124,6 +129,8 @@ main{
     @include mx.text-properties(balance, 1.6);
     color: #5c5c5b;
     z-index: 1;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 0.5s;
   }
 
   &__button{
@@ -136,7 +143,12 @@ main{
     transition: background-size 0.2s ease-in-out;
     z-index: 1;
 
+    animation: opacity-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both,
+                pulse-effect 5s ease-in-out infinite;
+    animation-delay: 1.5s;
+
     &:hover{
+      animation-play-state: paused;
       filter: brightness(110%);
       background-size: 100%;
     }
