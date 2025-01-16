@@ -2,10 +2,20 @@
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
+  color:#1e1e1e;
 }
 
 html {
+  font-family: "Poppins", serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  font-size: 17px;
   font-family: "Poppins", serif;
 }
