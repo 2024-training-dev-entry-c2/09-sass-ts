@@ -253,6 +253,17 @@ main{
     border-radius: 50%;
     box-shadow: 0 3px 4px mx.$color-primary-shadow;
   }
+
+  &__author{
+    & a{
+      color: mx.$color-black-secondary;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .cards{
@@ -286,7 +297,7 @@ main{
     @include mx.font-to-use(14);
     @include mx.text-properties(balance);
     padding-left: 15px;
-  }
+  }  
 
   &__link{
     @include mx.font-to-use(14, 600);
