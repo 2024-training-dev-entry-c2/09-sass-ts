@@ -474,7 +474,7 @@
     @include mix.size(50%, 544px);
     overflow: hidden;
     position: relative;
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: width 0.5s ease, height 0.3s ease;
     &--open {
       width: 100%;
       .product__name {
@@ -644,7 +644,7 @@
 
 .featured {
   @include mix.container(6rem 0 $size-medium 0, 62.875rem);
-  padding: 5px 1em 0 2em;
+  
   background: hsl(0, 0%, 5%);
   max-width: 62.875rem;
   &__container {
