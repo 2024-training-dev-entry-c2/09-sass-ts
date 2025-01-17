@@ -5,7 +5,7 @@
 .header {
     @include mix.flex-center;
     justify-content: space-between;
-    width: 1368px;
+    width: var.$header-width;
     position: fixed;
     @include mix.absolute-center;
 }
