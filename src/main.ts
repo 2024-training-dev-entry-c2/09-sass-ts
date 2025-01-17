@@ -1,20 +1,21 @@
-const arrowPrev = document.getElementById("arrow-prev") as HTMLElement;
-const arrowNext = document.getElementById("arrow-next") as HTMLElement;
-const wrapper = document.querySelector('.carousel__container') as HTMLElement;
+document.addEventListener("DOMContentLoaded", () => {
+  const mainLogo = document.getElementById("main-logo");
+  const scrollLogo = document.getElementById("scroll-logo");
 
-document.addEventListener('DOMContentLoaded', () => {
-  arrowPrev.addEventListener('click', () => {
-    wrapper.scrollTo({
-      left: wrapper.scrollLeft - 792,
-      behavior: 'smooth'
-    })
-  })
+  if (!mainLogo || !scrollLogo) {
+    console.error("Uno o ambos logos no existen en el DOM.");
+    return;
+  }
 
-  arrowNext.addEventListener('click', () => {
-    wrapper.scrollTo({
-      left: wrapper.scrollLeft + 792,
-      behavior: 'smooth'
-    })
-  })
-})
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
 
+    if (scrollPosition > 50) {
+      mainLogo.classList.add("hidden");
+      scrollLogo.classList.remove("hidden");
+    } else {
+      mainLogo.classList.remove("hidden");
+      scrollLogo.classList.add("hidden");
+    }
+  });
+});
