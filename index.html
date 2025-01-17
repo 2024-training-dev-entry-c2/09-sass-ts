@@ -36,23 +36,23 @@
 
 <body>
   <header>
-    <section class="promotion-band" aria-label="Shipping promotion advertise for Europe for buys from 90€">
-      <div class="promotion-band__content">
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
-        <p class="promotion-band__text">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+    <section class="promotion-band" aria-label="Free shipping promotion advertise for Europe for buys from 90€">
+      <div class="promotion-band__content" aria-hidden="true">
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
+        <p class="promotion-band__text" aria-hidden="true">LIVRAISON OFFERTE EN EUROPE DÈS 90€ D'ACHAT</p>
       </div>
     </section>
-    <section aria-label="Navigation bar">
+    <section aria-label="Main navigation bar">
       <nav class="navbar">
         <a class="navbar__logo-container" aria-label="Main VISSIONNAIRE logo that redirect to the home page" href="#">
           <i>
-            <svg class="navbar__logo" width="173" hight="20" viewBox="0 0 518 61" fill="black"
+            <svg class="navbar__logo" role="img" width="173" hight="20" viewBox="0 0 518 61" fill="black"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M390.4 1.8999H374V58.4999H390.4V1.8999Z" fill="black"></path>
               <path
@@ -96,18 +96,18 @@
           </i>
         </a>
         <menu class="navbar__menu">
-          <li>
+          <li role="menuitem" aria-label="New products gallery of novelties">
             <a href="#">NOUVEAUTÉS</a>
           </li>
-          <li>
+          <li role="menuitem" aria-label="Main shop page">
             <a href="#">SHOP</a>
             <!-- //TODO: DROPDOWN -->
           </li>
-          <li>
+          <li role="menuitem" aria-label="Collections page">
             <a href="#">COLLECTIONS</a>
             <!-- //TODO: DROPDOWN -->
           </li>
-          <li>
+          <li role="menuitem" aria-label="Promotions page">
             <a href="#">PROMOS</a>
           </li>
         </menu>
@@ -128,15 +128,17 @@
     </section>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" aria-label="Hero section showcasing discounts and the latest green puffer jacket design">
 
       <div class="hero__item">
-        <a class="hero__link" href="#">
+        <a class="hero__link" href="#" aria-label="Learn more about the discounts available on the website">
           <video class="hero__video" autoplay="autoplay" muted="muted" loop="loop"
+            aria-label="Promotional video highlighting available discounts"
             src="//vision-naire.com/cdn/shop/videos/c/vp/c7cf68690b7c49958d6cf435db347fdb/c7cf68690b7c49958d6cf435db347fdb.HD-1080p-7.2Mbps-40681738.mp4?v=0">
+            Your browser does not support the video tag.
           </video>
           <div class="hero__content-left">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -147,12 +149,13 @@
       </div>
 
       <div class="hero__item">
-        <a class="hero__link" href="#">
-          <video class="hero__video" autoplay="autoplay" muted="muted" loop="loop"
+        <a class="hero__link" href="#" aria-label="Discover the latest green puffer jacket design">
+          <video class="hero__video" aria-label="Video showcasing the latest green puffer jacket design"
+            autoplay="autoplay" muted="muted" loop="loop"
             src="//vision-naire.com/cdn/shop/videos/c/vp/55584719bfa14c74b58dabc1f610b4f4/55584719bfa14c74b58dabc1f610b4f4.HD-1080p-7.2Mbps-39555703.mp4?v=0">
           </video>
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -517,7 +520,8 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\group_of_models_harry_otter_collab.webp" alt="">
+          <img class="hero__video" src="images\group_of_models_harry_otter_collab.webp"
+            alt="grooup of models showcasing the harry potter collab">
           <div class="hero__content-right">
             <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
@@ -550,9 +554,10 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\group_of_models_harry_otter_collab.webp" alt="">
+          <img class="hero__video" src="public/images/group_of_models_zipper_hoodies.webp"
+            alt="group of four models showcasing the zipper hoodies collection themed in each harry's potter house">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -565,9 +570,9 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\model_collab.webp" alt="">
+          <img class="hero__video" src="images\model_collab.webp" alt="model showcasing the harry potter cap collab">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -580,9 +585,9 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\model_brown_dobby_pull.webp" alt="">
+          <img class="hero__video" src="images\model_brown_dobby_pull.webp" alt="model showcasing the brown dobby pull">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -595,9 +600,10 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\model_full_of_suitcases.webp" alt="">
+          <img class="hero__video" src="images\model_full_of_suitcases.webp"
+            alt="femenine model showcasing the harry potter t-shirt collection">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -610,9 +616,10 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\model_back_hagrid_hoodie.webp" alt="">
+          <img class="hero__video" src="images\model_back_hagrid_hoodie.webp"
+            alt="femenine model showcasing the hagrid's themed black hoodie">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -626,9 +633,10 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="public\images\lookbook_dobby_brown_sock.webp" alt="">
+          <img class="hero__video" src="public\images\lookbook_dobby_brown_sock.webp"
+            alt="brown dobby sockto free dobby from harry potter">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -641,9 +649,10 @@
 
       <div class="hero__item">
         <a class="hero__link" href="#">
-          <img class="hero__video" src="images\model_vissionaire_harry_potter_t-shirt.webp" alt="">
+          <img class="hero__video" src="images\model_vissionaire_harry_potter_t-shirt.webp"
+            alt="femenine model showcasing the VISSIONAIRE & harry potter t-shirt special design">
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -660,7 +669,7 @@
             src="//vision-naire.com/cdn/shop/videos/c/vp/c59cfcd5a43c43b6a78721703934eaf2/c59cfcd5a43c43b6a78721703934eaf2.HD-1080p-3.3Mbps-30442736.mp4?v=0">
           </video>
           <div class="hero__content-right">
-            <svg class="arrow" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg class="arrow" aria-hidden="true" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#fff" fill="none" fill-rule="evenodd">
                 <path d="M18.31 8.22H0M11.16 1l7.15 7.15-7.33 7.34"></path>
               </g>
@@ -679,11 +688,11 @@
       <div class="newspaper__title">
         EST. 2017
       </div>
-      <img class="newspaper__image" src="images\newspaper_setion.webp" alt="">
+      <img class="newspaper__image" src="images\newspaper_setion.webp" alt="model wearing the visionnaire black hoddie and sunglasses using a telephone">
       <div class="newspaper__content">
         <div class="newspaper__logo-container">
           <i>
-            <img src="public/vite.svg" alt="">
+            <img src="public/vite.svg" alt="vissionaire logo ">
           </i>
         </div>
 
