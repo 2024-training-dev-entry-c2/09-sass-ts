@@ -1,20 +1,24 @@
-const arrowPrev = document.getElementById("arrow-prev") as HTMLElement;
-const arrowNext = document.getElementById("arrow-next") as HTMLElement;
-const wrapper = document.querySelector('.carousel__container') as HTMLElement;
+const languageModal = document.getElementById("language-modal") as HTMLElement;
+const languageModalContainer = document.getElementById("lm-container") as HTMLElement;
+const languageButtons = document.querySelectorAll(".button_language") as NodeListOf<HTMLButtonElement>;
+const languageButtonClose = document.getElementById("lm-button-close") as HTMLButtonElement;
 
 document.addEventListener('DOMContentLoaded', () => {
-  arrowPrev.addEventListener('click', () => {
-    wrapper.scrollTo({
-      left: wrapper.scrollLeft - 792,
-      behavior: 'smooth'
-    })
+  languageButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      languageModal.classList.add("language-modal--show");
+      languageModalContainer.classList.add("language-modal__container--show");
+    });
+  });
+
+  languageButtonClose.addEventListener('click', () => {
+    languageModal.classList.add("language-modal--hide");
+    languageModalContainer.classList.add("language-modal__container--hide");
+
+    setTimeout(() => {
+      languageModalContainer.classList.remove("language-modal__container--show", "language-modal__container--hide");
+      languageModal.classList.remove("language-modal--show", "language-modal--hide");
+    }, 1000);
   })
 
-  arrowNext.addEventListener('click', () => {
-    wrapper.scrollTo({
-      left: wrapper.scrollLeft + 792,
-      behavior: 'smooth'
-    })
-  })
-})
-
+});
