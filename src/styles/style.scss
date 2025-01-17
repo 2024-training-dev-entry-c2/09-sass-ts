@@ -111,6 +111,7 @@
 .hero {
     display: flex;
     gap: 0px;
+    margin: 0px;
 
     &__video {
         width: 50dvw;
@@ -122,6 +123,7 @@
     &__link {
         position: relative;
         height: 100%;
+        display: flex;
 
         &:hover .arrow {
             transform: translateX(0) scale(1.2);
@@ -242,6 +244,8 @@
 .home-product__all {
     position: relative;
     height: 52px;
+    margin-top: 60px;
+    margin-bottom: 100px;
 
     &__link:hover .arrow {
         transform: translateX(0) scale(1.2);
@@ -388,4 +392,11 @@
     }
 
 
+}
+
+.mosaic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    margin: 0px;
 }
