@@ -112,6 +112,17 @@
         height: 34px;
         display: block;
     }
+
+    a:hover {
+        cursor: url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active_small.png?v=79124357518556369791658233708) 21 16, auto;
+        cursor: -webkit-image-set(url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active_small.png?v=79124357518556369791658233708) 1x, url(//vision-naire.com/cdn/shop/t/3/assets/cursor-active@2x_small.png?v=11241328135293569261658233706) 2x) 21 16, auto
+    }
+
+    a:active {
+        cursor: url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover_small.png?v=25506985200570235831658233708) 21 16, auto;
+        cursor: -webkit-image-set(url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover_small.png?v=25506985200570235831658233708) 1x, url(//vision-naire.com/cdn/shop/t/3/assets/cursor-hover@2x_small.png?v=69560968883176258041658233702) 2x) 21 16, auto
+    }
+
 }
 
 .hero {
