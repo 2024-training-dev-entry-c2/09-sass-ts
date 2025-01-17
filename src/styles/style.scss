@@ -125,6 +125,72 @@
         }
     }
 
+    &__dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+
+        ul {
+            padding: 1rem;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 18px;
+
+            li {
+                margin-bottom: 2rem;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1rem;
+                    color: black;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+
+                img {
+                    max-height: 1.3rem;
+                }
+            }
+        }
+    }
+
+    #shop-dropdown {
+        position: absolute;
+
+        top: 100%;
+        left: 40%;
+        width: 60%;
+    }
+
+    #shop-submenu:hover #shop-dropdown {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+
+    #collection-dropdown {
+        position: absolute;
+
+        top: 100%;
+        left: 61%;
+        width: 39%;
+    }
+
+    #collection-submenu:hover #collection-dropdown {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+    }
+
     &__cart {
         position: relative;
         border-left: var.$primary-color 1px solid;
