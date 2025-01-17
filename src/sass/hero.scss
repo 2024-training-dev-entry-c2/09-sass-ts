@@ -3,12 +3,14 @@
 .hero {
   position: relative;
   outline: 2px solid #1e1e1e;
+  cursor: url('../../public/images/paintbrush.ico') 0 110, auto;
 
   &__title {
     padding: 16px 40px;
     border-bottom: 2px solid #1e1e1e;
     font-size: 2rem;
   }
+
 }
 
 .menuColors {
@@ -21,6 +23,7 @@
     border: none;
     height: 44px;
     width: 44px;
+    cursor: url('../../public/images/paintbrush.ico') 0 110, auto;
   }
 
   $colors: (
@@ -50,16 +53,15 @@
 }
 
 .descriptionHero {
-  display: flex;
+  @include variables.container(space-between);
   width: 100%;
   position: absolute;
   bottom: 0;
-  justify-content: space-between;
   padding: 0 32px 40px 40px;
+  z-index: -1;
 
   &__button-connect {
-    display: flex;
-    justify-content: center;
+    @include variables.container(center);
     align-items: center;
     border: 2px solid #1e1e1e;
     font-size: 20px;

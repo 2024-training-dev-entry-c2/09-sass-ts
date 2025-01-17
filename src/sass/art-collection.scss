@@ -1,0 +1,50 @@
+@use "../variables.scss" as variables;
+
+.art-collection{
+    display: flex;
+    gap: 8px;
+    img{
+        outline: 2px solid #1e1e1e;
+        width: 50%;
+    }
+    div{
+        @include variables.container(center);
+        @include variables.container-gap(20px);
+        flex-direction: column;
+        padding: 4em;
+        outline: 2px solid #1e1e1e;
+        width: 50%;
+    
+        h3{
+            font-weight: 400;
+            font-size: 16px;
+        }
+        h4{
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 36px;
+        }
+        p{
+            font-weight: 400;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        button{
+            background-color: #fff;
+            color: #56b78f;
+            font-weight: 400;
+            padding: 8.8px 16px;
+            font-size: 15px;
+            width: 168px;
+            border-radius: 0;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #fbe462;
+                color: #1e1e1e;
+                text-decoration: underline;
+                transition: all .1s;
+            }
+        }
+    }
+}

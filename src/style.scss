@@ -1,4 +1,16 @@
-@use './reset';
+@use "./reset";
 
-@use './sass/navBar.scss';
-@use './sass/hero.scss'
+@use "./sass/navBar.scss";
+@use "./sass/hero.scss";
+@use "./sass/about.scss";
+@use "./sass/brands.scss";
+@use "./sass/art-collection.scss";
+@use "./sass/instagram.scss";
+@use "./sass/footer.scss";
+
+.container-page {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

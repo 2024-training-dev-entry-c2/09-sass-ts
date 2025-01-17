@@ -27,7 +27,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <nav class="header__nav">
         <i class="header__logo">
           <span
@@ -52,7 +52,13 @@
           ></span>
         </i>
         <div class="header__div">
-          <a href="#" class="header__title">GUSTÉ.DESIGN</a>
+          <a
+            role="link"
+            href="#"
+            class="header__title"
+            aria-label="redirect to main page"
+            >GUSTÉ.DESIGN</a
+          >
         </div>
         <menu class="menu">
           <li>
@@ -189,12 +195,12 @@
         </menu>
       </nav>
     </header>
-    <main>
+    <main class="container-page">
       <section class="hero">
         <h1 class="hero__title">Graphic design and illustration services.</h1>
         <menu class="menuColors">
           <li>
-            <button>
+            <button aria-label="reset-colors">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -213,7 +219,7 @@
             </button>
           </li>
           <li>
-            <button>
+            <button aria-label="return-color">
               <svg
                 stroke="currentColor"
                 fill="currentColor"
@@ -229,14 +235,45 @@
               </svg>
             </button>
           </li>
-          <li><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
-          <li><button></button></li>
+          <li>
+            <button
+              id="color-1"
+              aria-label="select color yellow button"
+            ></button>
+          </li>
+          <li>
+            <button
+              id="color-2"
+              aria-label="select color orange button"
+            ></button>
+          </li>
+          <li>
+            <button id="color-3" aria-label="select color red button"></button>
+          </li>
+          <li>
+            <button id="color-4" aria-label="select color pink button"></button>
+          </li>
+          <li>
+            <button
+              id="color-5"
+              aria-label="select color dark pink button"
+            ></button>
+          </li>
+          <li>
+            <button
+              id="color-6"
+              aria-label="select color green button"
+            ></button>
+          </li>
+          <li>
+            <button id="color-7" aria-label="select color blue button"></button>
+          </li>
+          <li>
+            <button
+              id="color-8"
+              aria-label="select color violet button"
+            ></button>
+          </li>
         </menu>
         <svg class="headPrinteable" viewBox="0 0 1500 1500">
           <style>
@@ -622,10 +659,228 @@
             Upgrade your dream vision with <br />
             personality-filled designs.
           </p>
-          <button class="descriptionHero__button-connect">CONNECT</button>
+          <button
+            class="descriptionHero__button-connect"
+            aria-label="redirect to connect page"
+          >
+            CONNECT
+          </button>
         </div>
       </section>
+      <section class="about">
+        <img
+          class="about__img"
+          src="https://cdn.sanity.io/images/uq1ipftd/production/81d152e3ecc07dfe658476750bbc64a46e2892f1-2938x2938.jpg?w=1920&h=1920&auto=format"
+          alt="image of the owner of the page"
+          loading="lazy"
+        />
+        <div class="about__div">
+          <h3>ABOUT</h3>
+          <h4>Hi! I'm Gusté,</h4>
+          <p>
+            An artistic graphic designer working across visual identities,
+            packaging design, and illustration, with a focus on sustainability,
+            wellness, education, and cultural projects.
+          </p>
+          <span>Let's get in touch!</span>
+        </div>
+      </section>
+      <section class="brands">
+        <img
+          src="https://cdn.sanity.io/images/uq1ipftd/production/e83cfcdbbb3a08d58edcb7604df8a9ca596fe5a5-5860x1527.gif"
+          alt="brands images"
+          loading="lazy"
+        />
+      </section>
+      <section class="art-collection">
+        <img
+          src="https://cdn.sanity.io/images/uq1ipftd/production/d60158aae40c2360f0dfa084293b142346962786-2510x2510.jpg?w=1366&h=1366&auto=format"
+          alt="
+          A surreal painting of a man with an hourglass for a head stands alone in a vast desert landscape. The sky above is a vibrant blue with fluffy white clouds.
+          The man's face is replaced by an hourglass, and sand trickles down from the top, symbolizing the passage of time. The desert setting adds to the sense of isolation and vastness, while the contrasting blue sky suggests a sense of hope or possibility.
+          The overall impression is one of introspection and contemplation on the nature of time and mortality.
+          "
+        />
+        <div>
+          <h3>ART COLLECTION</h3>
+          <h4>
+            Elevate your space with an eclectic collection of original
+            paintings.
+          </h4>
+          <p>
+            Art collection ignites the imagination and brings joy. Each piece
+            blends craftsmanship with creative expression, infusing personality
+            into any space.
+          </p>
+          <button aria-label="redirect to store">EXPLORE STORE</button>
+        </div>
+      </section>
+      <section class="instagram">
+        <h3>INSTAGRAM</h3>
+        <ul>
+          <li>
+            <img
+              src="https://guste.design/static/c43db765c1559289e7a6fdcf5a1123c8/8d77c/469094708_18469639933011844_5277590450156330206_n.webp"
+              alt="photo of a painting made by Guste published on instagram"
+            />
+          </li>
+          <li>
+            <img
+              src="https://guste.design/static/26917c90cf89dc3b0f363a20092efe38/e3100/468026373_18467601508011844_6980003445868467895_n.webp"
+              alt="photo of a painting made by Guste published on instagram"
+            />
+          </li>
+          <li>
+            <img
+              src="https://guste.design/static/dbfdc4612baea8bf5f86051974342720/017df/467642411_18467072425011844_1360014476235961058_n.webp"
+              alt="photo of a painting made by Guste published on instagram"
+            />
+          </li>
+          <li>
+            <img
+              src="https://guste.design/static/2abb523ffede8ec5f49e6fc91ed8daeb/69ecd/465143148_18463845358011844_4809339135360728042_n.webp"
+              alt="photo of a painting made by Guste published on instagram"
+            />
+          </li>
+        </ul>
+      </section>
     </main>
+    <footer class="footer">
+      <menu class="footer__menu">
+        <li>
+          <button aria-label="redirect to Shipping & Returns page">
+            <svg viewBox="0 0 1500 1500">
+              <defs>
+                <style>
+                  .cls-1,
+                  .cls-2 {
+                    fill: none;
+                  }
+
+                  .cls-2 {
+                    stroke: #000;
+                    stroke-miterlimit: 10;
+                    stroke-width: 113.39px;
+                  }
+                </style>
+              </defs>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path
+                    class="cls-2"
+                    d="M984.84,1304A585.85,585.85,0,0,1,750,1352.81c-324.74,0-588-263.26-588-588a585.41,585.41,0,0,1,73.36-284.63"
+                  ></path>
+                  <path
+                    class="cls-2"
+                    d="M486,239.25A585.52,585.52,0,0,1,750,176.8c324.74,0,588,263.25,588,588a585.31,585.31,0,0,1-79.57,295.57"
+                  ></path>
+                  <polyline
+                    points="717.71 360.07 343.4 323.52 535.19 0"
+                  ></polyline>
+                  <polyline
+                    points="945.6 1500 847.53 1136.92 1217.94 1202.02"
+                  ></polyline>
+                </g>
+              </g>
+            </svg>
+            <span>Shipping & Returns</span>
+          </button>
+        </li>
+        <li>
+          <a role="link" href="#" aria-label="redirect to page email">
+            <svg viewBox="0 0 1501 1500">
+              <defs>
+                <style>
+                  .cls-1,
+                  .cls-2 {
+                    fill: none;
+                  }
+
+                  .cls-1 {
+                    stroke: #000;
+                    stroke-miterlimit: 10;
+                    stroke-width: 113.39px;
+                  }
+                </style>
+              </defs>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <path
+                    d="M1387.61,340.5v819H113.39v-819H1387.61M1501,227.11H0V1272.89H1501V227.11Z"
+                  ></path>
+                  <polyline
+                    class="cls-1"
+                    points="1435.01 289.03 750.5 863.39 65.99 289.03"
+                  ></polyline>
+                </g>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a role="link" href="#" aria-label="redirect to instagram page">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1.3em"
+              width="1.3em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.3183118,0.0772036939 C18.5358869,0.132773211 19.3775594,0.311686093 20.156489,0.614412318 C20.9357539,0.917263935 21.5259307,1.30117806 22.1124276,1.88767349 C22.6988355,2.47414659 23.0827129,3.06422396 23.3856819,3.84361655 C23.688357,4.62263666 23.8672302,5.46418415 23.9227984,6.68172489 C23.9916356,8.19170553 24,8.72394829 24,11.9999742 C24,15.2760524 23.9916355,15.808302 23.9227954,17.3182896 C23.8672306,18.5358038 23.6883589,19.3773584 23.3855877,20.1566258 C23.0826716,20.9358162 22.6987642,21.5259396 22.1124276,22.1122749 C21.5259871,22.6987804 20.9357958,23.0827198 20.1563742,23.3856323 C19.3772192,23.6883583 18.5357324,23.8672318 17.3183209,23.9227442 C15.8086874,23.9916325 15.2765626,24 12,24 C8.72343739,24 8.19131258,23.9916325 6.68172382,23.9227463 C5.46426077,23.8672314 4.62270711,23.6883498 3.84342369,23.3855738 C3.0641689,23.0827004 2.47399369,22.6987612 1.88762592,22.1123283 C1.30117312,21.525877 0.91721975,20.9357071 0.614318116,20.1563835 C0.311643016,19.3773633 0.132769821,18.5358159 0.0772038909,17.3183251 C0.0083529426,15.8092887 0,15.2774634 0,11.9999742 C0,8.7225328 0.00835296697,8.19071076 0.0772047368,6.68165632 C0.132769821,5.46418415 0.311643016,4.62263666 0.614362729,3.84350174 C0.91719061,3.06430165 1.30113536,2.4741608 1.88757245,1.88772514 C2.47399369,1.30123879 3.0641689,0.917299613 3.84345255,0.614414972 C4.62236201,0.311696581 5.46409415,0.132773979 6.68163888,0.0772035898 C8.19074867,0.00835221992 8.72252573,0 12,0 C15.2774788,0 15.8092594,0.00835235053 17.3183118,0.0772036939 Z M12,2.66666667 C8.75959504,2.66666667 8.26400713,2.67445049 6.80319929,2.74109814 C5.87614637,2.78341009 5.31952221,2.90172878 4.80947575,3.09995521 C4.37397765,3.26922052 4.09725505,3.44924273 3.77324172,3.77329203 C3.44916209,4.09737087 3.26913181,4.37408574 3.09996253,4.80937168 C2.90169965,5.31965737 2.78340891,5.87618164 2.74109927,6.80321713 C2.67445122,8.26397158 2.66666667,8.75960374 2.66666667,11.9999742 C2.66666667,15.2403924 2.67445121,15.7360281 2.74109842,17.1967643 C2.78340891,18.1238184 2.90169965,18.6803426 3.09990404,19.1904778 C3.26914133,19.6259017 3.44919889,19.9026659 3.77329519,20.2267614 C4.09725505,20.5507573 4.37397765,20.7307795 4.80932525,20.8999863 C5.31971515,21.0982887 5.87621193,21.2165784 6.80323907,21.2588497 C8.26460439,21.3255353 8.76051223,21.3333333 12,21.3333333 C15.2394878,21.3333333 15.7353956,21.3255353 17.1968056,21.2588476 C18.123775,21.216579 18.6802056,21.0982995 19.1905083,20.9000309 C19.6260288,20.7307713 19.9027426,20.5507596 20.2267583,20.226708 C20.5507492,19.9027179 20.7308046,19.6259456 20.9000375,19.1906283 C21.0983009,18.6803412 21.2165908,18.1238118 21.2588986,17.196779 C21.3255376,15.7350718 21.3333333,15.2390126 21.3333333,11.9999742 C21.3333333,8.76098665 21.3255376,8.26493375 21.2589016,6.80323567 C21.2165911,5.87618164 21.0983004,5.31965737 20.9001178,4.80957831 C20.7308131,4.37403932 20.550774,4.09729207 20.2267583,3.77324038 C19.9027658,3.44924868 19.6260264,3.26922777 19.1905015,3.09996643 C18.6803988,2.90171817 18.1238378,2.78341062 17.1967608,2.74109868 C15.7359966,2.67445057 15.2404012,2.66666667 12,2.66666667 Z M12,18.2222222 C8.56356156,18.2222222 5.77777778,15.4364384 5.77777778,12 C5.77777778,8.56356156 8.56356156,5.77777778 12,5.77777778 C15.4364384,5.77777778 18.2222222,8.56356156 18.2222222,12 C18.2222222,15.4364384 15.4364384,18.2222222 12,18.2222222 Z M12,15.5555556 C13.9636791,15.5555556 15.5555556,13.9636791 15.5555556,12 C15.5555556,10.0363209 13.9636791,8.44444444 12,8.44444444 C10.0363209,8.44444444 8.44444444,10.0363209 8.44444444,12 C8.44444444,13.9636791 10.0363209,15.5555556 12,15.5555556 Z M18.2222222,7.11111111 C17.4858426,7.11111111 16.8888889,6.51415744 16.8888889,5.77777778 C16.8888889,5.04139811 17.4858426,4.44444444 18.2222222,4.44444444 C18.9586019,4.44444444 19.5555556,5.04139811 19.5555556,5.77777778 C19.5555556,6.51415744 18.9586019,7.11111111 18.2222222,7.11111111 Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a role="link" href="#" aria-label="redirect to Be page">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              role="img"
+              viewBox="0 0 24 24"
+              height="1.5em"
+              width="1.5em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a role="link" href="#" aria-label="redirect to Linkedin page">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 448 512"
+              height="1.4em"
+              width="1.4em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </menu>
+      <div class="footer__div">
+        <a
+          role="link"
+          class="created-by"
+          href="#"
+          aria-label="redirect to creator page"
+          >Crafted by <span>Mantas</span></a
+        >
+        <span class="created-in">© 2025 GUSTÉ.DESIGN</span>
+      </div>
+    </footer>
 
     <script src="./src/main.ts" type="module"></script>
   </body>
