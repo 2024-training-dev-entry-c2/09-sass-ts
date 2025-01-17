@@ -4,17 +4,18 @@
 .header {
     display: flex;
     justify-content: space-between;
-    /* padding: 25px; */
     align-items: center;
     width: 1368px;
     position: fixed;
-    /* top: -23px; */
     left: 50%;
     translate: -50%;
 }
 
 .promotion-band {
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var.$primary-color;
     color: var.$secondary-color;
     overflow: hidden;
@@ -22,6 +23,7 @@
     text-align: center;
     white-space: nowrap;
     display: flex;
+    z-index: 1000;
 
     &__content {
         display: flex;
@@ -48,6 +50,8 @@
 }
 
 .navbar {
+    position: fixed;
+    top: 18px;
     display: flex;
     min-height: 40px;
     justify-content: space-between;
@@ -55,6 +59,8 @@
     padding: 0px 0px;
     background-color: var.$secondary-color;
     border-bottom: 1px solid var.$primary-color;
+    z-index: 999;
+    width: 100%;
 
     &__logo-container {
         display: flex;
