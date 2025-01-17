@@ -49,6 +49,24 @@
     }
 }
 
+#scroll-logo {
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#main-logo,
+#scroll-logo {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+#main-logo.hidden,
+#scroll-logo.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .navbar {
     position: fixed;
     top: 18px;
@@ -71,11 +89,21 @@
         flex: 1;
         padding-left: 15px;
         padding-right: 30px;
+        // transition: cubic-bezier(0.23, 1, 0.320, 1);
     }
 
     &__logo {
         padding-left: 20px;
         padding-left: 20px;
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+
+        &.hidden {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+        }
     }
 
     &__menu {
