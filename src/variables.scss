@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //* Colores
 $cobackgroundlor-: #0d0d0d;
 $color-text: #fff;
@@ -39,3 +40,22 @@ $size-medium: 4rem;
 
 
 
+=======
+$gray: #00000052;
+
+@mixin container($justify: start) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+
+@mixin container-gap($gap: 0) {
+  @include container;
+  gap: $gap;
+}
+
+@function px-to-rem($px, $base: 16) {
+  @return $px / $base * 1rem;
+}
+>>>>>>> 897b90c18de79a85fd8c4e2751417cff0828f687
