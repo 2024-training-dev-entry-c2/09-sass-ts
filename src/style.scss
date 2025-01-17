@@ -186,8 +186,19 @@
     @include mix.flex(row, center, center);
     max-width: 100%;
     padding: 0;
-    transform: scale(1);
     overflow: hidden;
+    position: relative;
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+  
+    &::before {
+      left: 0;
+      top: 0;
+    }
+    
   }
 
   &__list {
@@ -200,7 +211,7 @@
     margin: 0;
     word-wrap: break-word;
     padding: 0;
-    width: calc(100%);
+    width: calc(100px*14);
   }
 
   &__carousel-item {
@@ -216,7 +227,7 @@
     overflow: hidden;
     border-radius: $size-small;
     width: 100%;
-    background-color: $colot-text-dark;
+    background-color: #0d0d0d;
     & img {
       @include mix.size(auto, 345px);
       object-fit: cover;
@@ -925,28 +936,36 @@
     justify-content: center;
   }
   &__image {
-    &--tertiary,
-    &--primary,
+    &--tertiary{
+      position: relative;
+      z-index: 2;
+      transition: transform 0.7s ease, box-shadow 0.3s ease;
+    }
+    &--primary{
+      position: relative;
+      z-index: 2;
+      transition: transform 1s ease, box-shadow 0.3s ease;
+    }
     &--secondary {
       position: relative;
       z-index: 2;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
     }
     &--tertiary {
       @include mix.size(345px, 268px);
       color: transparent;
       right: 8%;
       justify-self: end;
-      transform: translateY(10px);
+      transform: translateY(15px);
     }
     &--primary {
       left: 8%;
-      transform: translateY(10px);
+      transform: translateY(15px);
     }
     &--secondary {
       backdrop-filter: blur(20px);
       height: auto;
-      transform: translateY(10px);
+      transform: translateY(15px);
       z-index: 10;
     }
   }
