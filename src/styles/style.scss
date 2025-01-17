@@ -400,3 +400,89 @@
     gap: 0px;
     margin: 0px;
 }
+
+.newspaper {
+    text-transform: uppercase;
+
+    &__title {
+        font-size: 45px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 140px 0px 15px 50px;
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 50px;
+        display: flex;
+    }
+
+    &__logo-container {
+        display: flex;
+        justify-content: start;
+        width: 50%;
+    }
+
+    &__club-invitation {
+        font-size: 45px;
+        letter-spacing: 0.7px;
+        text-align: left;
+        display: flex;
+        width: 50%;
+        font-weight: 500;
+
+        &__icon {
+            position: relative;
+            vertical-align: top;
+            display: inline;
+            top: 10px;
+            right: 13px;
+        }
+
+        &__form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 5px;
+        }
+
+        &__input {
+            width: 45vw;
+            border: none;
+            border-bottom: 1px solid var.$primary-color;
+            outline: none;
+            flex: 1;
+            font-size: 16px;
+            color: var.$primary-color;
+            font-weight: 500;
+            opacity: 1;
+            padding-top: 40px;
+            padding-bottom: 10px;
+
+            &::placeholder {
+                color: var.$primary-color;
+                font-weight: 600;
+                opacity: 1;
+            }
+        }
+
+
+        &__button {
+            padding-bottom: 10px;
+            padding-left: 2px;
+            padding-top: 40px;
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-left: 20px;
+            border-bottom: 1px solid var.$primary-color;
+        }
+    }
+}
