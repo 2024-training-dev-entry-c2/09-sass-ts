@@ -396,16 +396,19 @@
 }
 
 .product-card {
-    @include mix.flex-center;
+
+    // @include mix.flex-center;
     flex-direction: column;
     position: relative;
     width: 100%;
     justify-content: flex-end;
 
     &__image-container {
+        display: flex;
         position: relative;
         width: 100%;
-        height: 36rem;
+        // height: 36rem;
+        height: 23vw;
         overflow: hidden;
     }
 
