@@ -82,7 +82,7 @@
     }
     &--title-big {
       @include variables.display(unset, unset, column);
-      font-size: 6rem;
+      font-size: 7rem;
       line-height: 1;
       font-weight: 560;
     }
@@ -227,12 +227,12 @@
   &__item {
     @include variables.display(center, center, row, flex-end);
     list-style: none;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     list-style: none;
 
     span {
-      @include variables.size(4px, 25px);
+      @include variables.size(4px, 23px);
       opacity: 40%;
       mix-blend-mode: color;
       border-radius: 100px;
@@ -271,7 +271,7 @@
 
 
 
-  padding: 0px 30px 35px 30px;
+  padding: 0px 30px 20px 30px;
   background: transparent;
   margin: 21px;
   &__section {
