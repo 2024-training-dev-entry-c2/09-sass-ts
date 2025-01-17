@@ -4,301 +4,556 @@
 .header {
   @include variables.container(space-between);
   padding: 25px;
-  width: 1368px;
-  position: fixed;
+  width: 1490px;
+  position: absolute;
   top: 0;
   left: 50%;
   translate: -50%;
 
-  &__actions {
-    @include variables.container-gap(30px);
+  &__title {
+    @include variables.text(20px);
   }
-  
-  &__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
+
+  &__badge {
+    @include variables.font(12px, 600);
+    background-color: variables.$smoky-gray;
+    color: #ffffff7a;
+    height: 22px;
+    line-height: 1;
+    padding: 7px;
+    border-radius: 15px;
   }
-  
+
   &__button {
-    color: #FFF;
-    background-color: #000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
-    font-weight: 500;
+    @include variables.button(10px, 10px 14px 10px 14px);
+    @include variables.font(15px, 600);
+    background: #3898ff;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.navigation {
+  @include variables.container-gap(15px);
+
+  &__item {
+    border-radius: 30%;
+  }
+}
+
+.hero {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(circle at 50% 46%, hsla(236.6470426671645, 90%, 28%, 1) 0%, transparent 38.41513019140126%), radial-gradient(circle at 93% 95%, hsla(0, 0%, 0%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(307, 0%, 0%, 1) 0%, transparent 150%);
+  background-blend-mode: normal, normal, normal;
+  padding: 170px;
+  padding-bottom: 100px;
+}
+
+.hero-container {
+  @include variables.container-grid(normal, 10px);
+  justify-items: center;
+  line-height: 1;
+
+  &__title {
+    @include variables.text(40px, #677aff);
+    font-weight: 800;
+  }
+
+  &__second-title {
+    @include variables.text(50px);
+    font-weight: 800;
+    letter-spacing: -0.65px;
+  }
+
+  &__text {
+    @include variables.text(30px);
+  }
+
+  &__button {
+    @include variables.button(30px, 15px 25px 15px 25px, #ffffffd9);
+    @include variables.font(15px, 800);
+    background-image: linear-gradient(to right, #3898ff, #7a70ff);
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.code-container {
+  @include variables.container(space-evenly);
+  height: 44px;
+  line-height: 1;
+  background: variables.$smoky-gray;
+  width: 35%;
+  border-radius: 30px;
+  margin-top: 30px;
+
+  &__text {
+    @include variables.text(15px);
+  }
+
+  &__button {
+    background-color: transparent;
+    color: #ffffff59;
     border: none;
     cursor: pointer;
   }
 }
 
-.menu {
-  @include variables.container-gap(40px);
-  list-style: none;
+.picture-container {
+  position: relative;
+  top: 70px;
+
+  &__first-img {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__second-img {
+    position: relative;
+    z-index: 2;
+    margin-left: 510px;
+  }
+
+  &__third-img {
+    position: relative;
+    z-index: 3;
+    bottom: 30px;
+    margin-left: -150px;
+  }
+}
+
+.team-container {
+  margin-top: 70px;
+  justify-items: center;
+
+  &__text {
+    @include variables.text(24px);
+    width: 60%;
+    text-align: center;
+  }
+}
+
+.bento {
+  @include variables.container-grid(start, 30px);
+  margin: 40px auto;
+  max-width: 940px;
+  grid-template-columns: repeat(6, 1fr);
 
   &__item {
-    font-weight: 600;
-  }
-  
-  &__item, &__icon {
-    @include variables.container-gap(3px);
-  }
-  
-  &__icon {
-    color: variables.$gray;
-  }
-  
-  &__link {
-    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #ffffffc8;
+    font-size: 18px;
     text-decoration: none;
+    justify-items: center;
+
+    img {
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  $distributions: (
+    1: 1 / 2,
+    2: 2 / 4,
+    3: 4 / 6,
+    4: 6 / 8,
+    5: 8 / 10,
+    6: 10 / 12,
+    7: 1 / 2,
+    8: 2 / 4,
+    9: 4 / 6,
+    10: 6 / 8,
+    11: 8 / 10,
+    12: 10 / 12,
+    13: 1 / 2,
+    14: 2 / 4,
+    15: 4 / 6,
+    16: 6 / 8,
+    17: 8 / 10,
+    18: 10 / 12,
+    19: 1 / 2,
+    20: 2 / 4,
+    21: 4 / 6,
+    22: 6 / 8,
+    23: 8 / 10,
+    24: 10 / 12,
+  );
+
+@each $key, $value in $distributions {
+  & :nth-child(#{$key}) {
+    grid-column: $value;
+  }
+}
+}
+
+.kit-container {
+  padding: 150px;
+  background-color: variables.$blue;
+}
+
+.information-container {
+  text-align: center;
+  gap: 10px;
+  line-height: 1;
+  padding-inline: 250px;
+  margin-bottom: 70px;
+
+  &__title {
+    @include variables.text(50px);
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @include variables.text(25px);
+    font-weight: 700;
+    letter-spacing: -0.65px;
+  }
+}
+
+.panel {
+  justify-items: center;
+}
+
+.panel-content {
+  display: flex;
+  padding: 20px 20px 0 20px;
+  width: 712px;
+  height: 470px;
+  background-color: variables.$white;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.panel-nav {
+  min-width: 245px;
+  overflow-y: scroll;
+
+  h3 {
+    @include variables.font(20px, 800);
+  }
+}
+
+.menu {
+  list-style: none;
+  padding-bottom: 20px;
+
+  h5 {
+    margin-top: 20px;
+    color: variables.$gray;
+    font-size: 14px;
+  }
+
+  i {
+    height: 30px;
+    border: 1px solid #c2bcbc52;
+    border-radius: 8px;
+  }
+
+  svg {
+    border-radius: 8px;
   }
 }
 
 .sub-menu {
-  display: none;
+  list-style: none;
+
+  &__item {
+    @include variables.container-gap(10px);
+    margin-top: 10px;
+  }
 }
 
-.hero {
-  background-color: hsla(132, 0%, 100%, 1);
-  background-image: radial-gradient(circle at 91% 11%, hsla(13, 100%, 88%, 0) 4.038772213247173%, transparent 37.2265767974114%), radial-gradient(circle at 23% 50%, hsla(323, 100%, 88%, 0.76) 19.04202876606054%, transparent 63.33640956108327%), radial-gradient(circle at 73% 35%, hsla(267.9999999999999, 100%, 88%, 0.8) 21.05892295704486%, transparent 63.33640956108327%);
-  background-blend-mode: normal, normal, normal;
-  padding: 180px;
-  
-  &__data {
-    @include variables.container-gap(50px);
-    max-width: 1368px;
-    margin: 0 auto;
-    padding-inline: 25px;
+.panel-information {
+  padding-left: 20px;
+
+  header {
+    text-align: right;
   }
-  
-  &__title {
-    font-size: 75px;
-    text-wrap: balance;
-  }
-  
-  &__description {
-    font-size: 23px;
-  }
-  
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
+
   &__button {
-    position: relative;
-    border-radius: 5px;
-    text-decoration: none;
-    width: fit-content;
-    overflow: hidden;
-    padding: 5px;
-    box-sizing: content-box;
+    @include variables.button(50%, 8px 10px 5px 10px, variables.$smoky-gray);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
-  
-  &__button {
+
+  main {
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  .banner-container {
+    justify-items: center;
+    margin-top: 25px;
+
+    &__banner {
+      @include variables.container-gap(10px);
+      width: 70%;
+
+      h5 {
+        font-size: 15px;
+      }
+
+      p {
+        color: variables.$gray;
+        font-size: 14px;
+      }
+    }
+  }
+
+  footer {
+    @include variables.container-grid(space-evenly, 10px);
+    margin-top: 20px;
+
+    button {
+      @include variables.button(30px, 8px 20px 8px 20px);
+      background-color: variables.$blue;
+      border: none;
+      font-weight: 600;
+    }
+
     span {
-      background-color: #000;
-      border-radius: 5px;
-      color: #FFF;
-      display: block;
-      padding: 10px;
-      position: relative;
-      z-index: 1;
+      text-align: center;
+      color: variables.$light-blue;
+      font-weight: 700;
     }
   }
-  
+}
+
+.options {
+  margin-top: 50px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+  }
+
+  &__text {
+    @include variables.text(22px, #80a7f0);
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
   &__button {
-    &::after {
-      content: '';
-      width: 1000px;
-      height: 1000px;
-      position: absolute;
-      background-image: linear-gradient(144deg, #fc7a9b, #b47eee);
-      left: -300px;
-      border-radius: 5px;
-      top: -300px;
-      z-index: 0;
-      animation: gradient 2s infinite;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .12);
+    background: #ffffff52;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &[aria-selected="true"] {
+      outline: 4px solid #ffffff;
+      outline-offset: 4px;
+      transform: scale(1);
     }
   }
 
-  &__requirements {
-    color: variables.$gray;
-    font-size: 16px;
+  &__button-text {
+    @include variables.text(15px);
+    font-weight: 700;
+  }
+
+  #blue {
+    background-color: variables.$blue;
+  }
+
+  #dark-blue {
+    background-color: variables.$dark-blue;
+  }
+
+  #pink {
+    background-color: variables.$pink;
+  }
+
+  #red {
+    background-color: variables.$red;
+  }
+
+  #orange {
+    background-color: variables.$orange;
+  }
+
+  #green {
+    background-color: variables.$green;
+  }
+
+  #white {
+    background-color: variables.$white;
+  }
+
+  #gray {
+    background-color: variables.$dark-gray;
+  }
+
+  #black {
+    background-color: variables.$black;
   }
 }
 
-@keyframes gradient {
-  0% {
-    rotate: 0;
-  }
-  100% {
-    rotate: 360deg;
+.workers-container {
+  background-color: #1b1c1e;
+  text-align: center;
+  padding-bottom: 120px;
+
+  button {
+    @include variables.button(30px, 15px 25px 15px 25px);
+    @include variables.font(15px, 600);
+    background-color: #3b84e4;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s transform;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 
-.banner {
+.developers-container {
+  text-align: center;
+  gap: 10px;
+  line-height: 1;
+  padding: 120px 120px 80px 120px;
+  justify-items: center;
+
+  &__title {
+    @include variables.text(50px);
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @include variables.text(25px);
+    font-weight: 700;
+    letter-spacing: -0.65px;
+    width: 58%;
+  }
+}
+
+.list-container {
   display: flex;
-  border-radius: 10px;
-  background-color: #FFF;
-  width: 792px;
-  margin: 70px auto;
-  text-decoration: none;
-  color: #000;
-  height: 112px;
+  padding: 0px 390px 100px 390px;
+}
+
+.list {
+  padding-inline: 50px;
+  color: variables.$white;
+  list-style: none;
+
+  li {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.company-container {
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.about-container {
+  text-align: center;
+  gap: 10px;
+  line-height: 1;
+  padding: 120px 120px 80px 120px;
+  justify-items: center;
+
+  &__content {
+    display: flex;
+    gap: 15px;
+
+    svg {
+      border-radius: 10px;
+    }
+  }
+
+  &__title {
+    @include variables.text(55px, variables.$black);
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    @include variables.text(25px, variables.$black);
+    font-weight: 700;
+    letter-spacing: -0.65px;
+    width: 58%;
+  }
+}
+
+.follow-button {
+  @include variables.button(30px, 12px 25px 12px 25px);
+  @include variables.font(15px, 600);
+  border: none;
+  background-image: linear-gradient(270deg, #1da1f2, #1d7df2);
+  margin-right: 20px;
+  cursor: pointer;
   transition: 0.5s transform;
 
   &:hover {
     transform: scale(1.05);
   }
-  
-  &__container {
-    padding: 20px;
-  
-    p {
-      span {
-        font-weight: 600;
-        border-bottom: 2px solid variables.$gray;
-      }
-    }
-  }
-  
-  &__video {
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  
-  &__title {
-    font-size: 17px;
+}
+
+.share-button {
+  @include variables.button(30px, 12px 25px 12px 25px);
+  @include variables.font(15px, 600);
+  border: none;
+  background-image: linear-gradient(270deg, #ff6257, variables.$pink);
+  cursor: pointer;
+  transition: 0.5s transform;
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
-.bento {
-  max-width: 1368px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
+.footer-links {
+  text-align: center;
+  padding-bottom: 120px;
+  list-style: none;
+  line-height: 2;
 
-  &__item {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #e4d7d7;
-    padding: 20px;
-  
-    &--primary {
-      background-color: #b47eee;
-    }
-  }
-
-  $distributions: (
-    1: 1 / span 6,
-    2: 7 / span 3,
-    3: 10 / span 3,
-    4: 1 / span 3,
-    5: 4 / span 3,
-    6: 7 / span 6
-  );
-
-  @each $key, $value in $distributions {
-    & :nth-child(#{$key}) {
-      grid-column: $value;
-    }
-  }
-
-  // @for $i from 1 through 6 {
-  //   & :nth-child(#{$i}) {
-  //     @if $i == 1 {
-  //       grid-column: 1 / 7;
-  //     } @else if $i == 2 {
-  //       grid-column: 7 / 10;
-  //     } @else if $i == 3 {
-  //       grid-column: 10 / 13;
-  //     } @else if $i == 4 {
-  //       grid-column: 1 / 4;
-  //     } @else if $i == 5 {
-  //       grid-column: 4 / 7;
-  //     } @else if $i == 6 {
-  //       grid-column: 7 / 13;
-  //     }
-  //   }
-  // }
-
-}
-
-
-.carousel {
-  padding-block: 70px;
-  background-color: #f5f5f5;
-  position: relative;
-  
-  &__container {
-    padding-bottom: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: scroll;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  &__wrapper {
-    @include variables.container-gap(40px);
-  }
-
-  &__item {
-    @include variables.container-gap(40px);
-    align-items: start;
-    padding: 50px;
-    border-radius: 20px;
-    background-color: #FFF;
-    min-width: 792px;
-
-    p {
-      color: #5c5c5c;
-      font-size: 18px;
-      font-weight: 500;
-    }
-  }
-
-  &__data {
-    @include variables.container-gap(100px);
-  }
-
-  &__arrow {
-    @include variables.container(center);
-    background-color: #0000000a;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+  a {
+    text-decoration: none;
+    @include variables.font(22px, 700);
+    color: #1b1d1fb3;
     cursor: pointer;
-
-    &--prev {
-      rotate: 180deg;
-    }
   }
 
-  &__arrows {
-    position: absolute;
-    bottom: 70px;
-    right: 500px;
-    @include variables.container(end);
-    margin-top: 20px;
-    margin-right: 120px;
-    gap: 10px;
+  :hover {
+    color: variables.$dark-blue;
   }
 
-  &__author {
-    margin-top: 20px;
-    @include variables.container(start);
-    gap: 20px;
-
-    img { 
-      width: 50px;
-      border-radius: 50%;
-    }
+  &__text {
+    @include variables.text(22px, #1b1d1f80);
+    font-weight: 700;
+    pointer-events: none;
   }
 }
