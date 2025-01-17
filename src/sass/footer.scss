@@ -1,0 +1,72 @@
+@use "../variables.scss" as variables;
+
+.footer {
+  @include variables.container(space-between);
+  outline: 2px solid #1e1e1e;
+  height: 40px;
+
+  svg {
+    width: 25px;
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+
+    button {
+      outline: 2px solid #1e1e1e;
+      background-color: #fff;
+      border: none;
+      display: flex;
+      gap: 5.6px;
+      align-items: center;
+      padding: 8px;
+      text-align: center;
+      height: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      svg {
+        width: 20px;
+      }
+    }
+
+    a {
+      border-right: 2px solid #1e1e1e;
+      display: flex;
+      justify-content: center;
+      width: 48px;
+      padding: 8px;
+      height: 100%;
+    }
+  }
+
+  &__div{
+    display: flex;
+}
+}
+
+.created-by {
+  text-decoration: none;
+  outline: 2px solid #1e1e1e;
+  @include variables.container(center);
+  padding: 8px;
+  height: 100%;
+
+  span {
+    color: #56b78f;
+    margin-left: 5px;
+  }
+}
+
+.created-in{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+
+    span {
+      outline: 2px solid #1e1e1e;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+    }
+}

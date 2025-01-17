@@ -1,0 +1,79 @@
+@use "../variables.scss" as variables;
+
+.hero {
+  position: relative;
+  outline: 2px solid #1e1e1e;
+  cursor: url('../../public/images/paintbrush.ico') 0 110, auto;
+
+  &__title {
+    padding: 16px 40px;
+    border-bottom: 2px solid #1e1e1e;
+    font-size: 2rem;
+  }
+
+}
+
+.menuColors {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+
+  button {
+    background-color: #fff;
+    border: none;
+    height: 44px;
+    width: 44px;
+    cursor: url('../../public/images/paintbrush.ico') 0 110, auto;
+  }
+
+  $colors: (
+    3: rgb(255, 224, 0),
+    4: rgb(238, 114, 75),
+    5: rgb(233, 74, 59),
+    6: rgb(230, 148, 191),
+    7: rgb(205, 69, 146),
+    8: rgb(88, 183, 137),
+    9: rgb(39, 127, 195),
+    10: rgb(97, 100, 171),
+  );
+
+  @each $key, $value in $colors {
+    & :nth-child(#{$key}) {
+      button {
+        outline: 2px solid #1e1e1e;
+        background-color: $value;
+      }
+    }
+  }
+}
+
+.headPrinteable {
+  height: 73vh;
+  width: 100%;
+}
+
+.descriptionHero {
+  @include variables.container(space-between);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0 32px 40px 40px;
+  z-index: -1;
+
+  &__button-connect {
+    @include variables.container(center);
+    align-items: center;
+    border: 2px solid #1e1e1e;
+    font-size: 20px;
+    height: 8rem;
+    width: 8rem;
+    padding: 20px;
+    border-radius: 50%;
+  }
+  p{
+    display: flex;
+    align-items: end;
+    font-size: 19.2px;
+    line-height: 20.8px;
+  }
+}

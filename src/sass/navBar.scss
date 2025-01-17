@@ -1,0 +1,52 @@
+@use '../variables.scss' as variables;
+
+.header{
+  margin-right: 8px;
+  box-sizing: border-box;
+  position: fixed;
+  width: -webkit-fill-available;
+  background-color: #fff;
+  z-index: 100;
+  &__nav{
+    outline: 2px solid #1e1e1e;
+    @include variables.container(space-between);
+  }
+  &__logo{
+    display: flex;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    animation: girar 3s infinite linear; 
+  }
+  &__div{
+    padding: 8px;
+    border-left: 2px solid #1e1e1e;
+    width: 100%;
+    text-decoration: none;
+  }
+  &__title{
+    text-decoration: none;
+    font-weight: bold
+  }
+}
+
+@keyframes girar {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.menu{
+  @include variables.container();
+  @include variables.container-gap(3px);
+  text-wrap: nowrap;
+  list-style-type: none;
+
+  li{
+    @include variables.container-gap(3.2px);
+    padding: 8px;
+    border-left: 2px solid #1e1e1e;
+  }
+}
