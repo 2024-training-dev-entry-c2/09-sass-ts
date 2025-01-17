@@ -1,0 +1,425 @@
+@use './general.scss';
+@use './variables.scss' as variables;
+
+h2 {
+    text-transform: uppercase;
+    color: variables.$colorFuente3;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mas{
+    max-width: 17px;
+    max-height: 17px;
+
+}
+
+.contenedorJoin {
+    @include variables.tipoContenedor1(center);
+    gap: 15px;
+
+    &-join {
+        @include variables.rellenoContenedor(black, white, 12px 27px 12px 27px, 40px);
+        font-weight: 600;
+
+        &:hover {
+            background-color: variables.$colorFuente3;
+        }
+    }
+
+    &-contenedorPersonas {
+        @include variables.tipoContenedor1(center);
+
+        &-persona {
+            @include variables.fotoPequeRedonda();
+        }
+    }
+
+    &-miembros {
+        color: variables.$colorFuente2;
+        font-size: 14.2px;
+        font-weight: 600;
+    }
+}
+
+
+.header {
+    &-opciones {
+
+        @include variables.tipoContenedor1(space-between);
+        padding: 10px;
+        font-weight: 500;
+        font-size: 17px;
+        list-style: none;
+
+        &-logo {
+            @include variables.tipoContenedor1(space-between);
+            gap: 10px;
+
+            &-figura {
+                @include variables.rellenoContenedor(black, white, 8px 5px 8px 4px, 5px);
+                font-size: 12.7px;
+                font-weight: 650;
+            }
+
+        }
+
+        &-singIn {
+            @include variables.rellenoContenedor(white, black, 10px 22px 10px 22px, 40px);
+            box-shadow: 0.3px 0px 2px rgba(0, 0, 0, 0.5);
+        }
+
+    }
+}
+
+.main {
+    &-seccion1 {
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(100px, 100px);
+
+        &-contenedor {
+            @include variables.tipoContenedor1(center);
+            gap: 23px;
+            flex-direction: column;
+
+            &-imagenProducto1 {
+                width: 190px;
+            }
+
+            h1 {
+                @include variables.titulo();
+            }
+
+            &-contenido {
+                @include variables.textoGrandeGris();
+            }
+        }
+
+        &-contenedorEmpresas {
+
+            h5 {
+                @include variables.textoGrandeGris();
+                font-size: 15.2px;
+                color: variables.$colorFuente3;
+                padding-bottom: 20px;
+            }
+
+            &-iconos {
+                display: flex;
+                gap: 41px;
+            }
+        }
+
+    }
+
+    &-seccion2 {
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(15px, 150px);
+        background-color: variables.$colorFondo1;
+
+        &-contenido {
+            list-style: none;
+            @include variables.titulo();
+
+            &-titulo {
+                padding-bottom: 10px
+            }
+        }
+
+        &-join {
+            @include variables.rellenoContenedor(white, black, 10px 22px 10px 22px, 40px);
+            box-shadow: 0.3px 0px 2px rgba(0, 0, 0, 0.5);
+            font-weight: 600;
+        }
+
+    }
+
+    &-seccion3 {
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(40px, 100px);
+
+        h3 {
+            @include variables.titulo;
+        }
+
+        &-contenido {
+            @include variables.tipoContenedor1(center);
+            @include variables.textoGrandeGris();
+            text-align: left;
+            gap: 60px;
+
+            p {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+        }
+
+
+    }
+
+    &-seccion4 {
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(50px, 100px);
+
+        &-titulo {
+            @include variables.titulo();
+        }
+
+        &-persona {
+            @include variables.fotoPequeRedonda();
+        }
+
+        &-opiniones {
+            display: grid;
+            grid-template-columns: repeat(3, 350px);
+            grid-auto-rows: min-content;
+            grid-auto-flow: row dense;
+            gap: 15px;
+
+            &-opion {
+                background-color: variables.$colorFondo1;
+                border-radius: 13px;
+                padding: 30px;
+                align-self: start;
+                cursor: pointer;
+                opacity: 0;
+                transform: translateX(100px);
+                transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+
+                blockquote {
+                    @include variables.textoGrandeGris();
+                    text-align: left;
+                    padding-bottom: 20px;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+
+                &-perfil {
+                    display: flex;
+                    gap: 10px;
+                    font-size: 12.5px;
+
+                    a {
+                        color: variables.$colorFuente1;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+
+            &-opion.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+    }
+
+    &-seccion5 {
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(15px, 100px);
+
+        h3 {
+            @include variables.titulo();
+        }
+
+        &-planes {
+            @include variables.tipoContenedor1(center);
+            gap: 15px;
+
+            &-plan {
+                @include variables.rellenoContenedor(variables.$colorFondo1, black, 45px 30px 70px 30px, 20px);
+                @include variables.textoGrandeGris();
+
+                &-lista {
+                    padding-bottom: 20px;
+                    list-style: none;
+                    text-align: left;
+
+                    li {
+                        padding-bottom: 13px;
+                    }
+                }
+
+                &-header {
+                    display: flex;
+                    gap: 140px;
+                    padding-bottom: 10px;
+                }
+
+                &-tiempo {
+                    color: black;
+                    font-size: 25px;
+                    text-align: left;
+                }
+
+                &-tiempo2 {
+                    color: black;
+                    font-size: 25px;
+                    text-align: left;
+                    padding-bottom: 15px;
+                }
+
+                &-precio {
+                    @include variables.titulo();
+                    font-weight: 700;
+                    font-size: 55px;
+                    color: black;
+                    text-align: left;
+                    padding-bottom: 30px;
+                }
+
+                &-promo {
+                    @include variables.rellenoContenedor(#D4FFE1, #49D676, 5px 15px 5px 15px, 40px);
+
+                }
+
+                &-boton {
+                    @include variables.rellenoContenedor(black, white, 12px 90px 12px 90px, 40px);
+
+                    &:hover {
+                        background-color: variables.$colorFuente3;
+                    }
+                }
+
+                &-boton2 {
+                    @include variables.rellenoContenedor(white, black, 12px 90px 12px 90px, 40px);
+                    box-shadow: 0.3px 0px 2px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+
+    }
+
+    &-seccion6{
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(15px, 90px);
+        h3{
+            @include variables.titulo();
+            padding-bottom: 25px;
+        }
+        &-preguntas{
+            width: 47%;
+            background-color: variables.$colorFondo1;
+            &-contenedor{
+                padding: 10px;
+                h5{
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+                p{
+                    @include variables.textoGrandeGris();
+                    text-align: left;
+                }
+                &-pregunta{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 20px;
+                }
+                button{
+                    border: none;
+                    cursor: pointer;
+                    background-color: variables.$colorFondo1;
+                }
+            }
+        }
+    }
+
+    &-seccion7{
+        @include variables.tipoContenedor1(center);
+        @include variables.tipoContenedor1Complemento(15px, 50px);
+        background-color: variables.$colorFondo1;
+        &-titulo{
+            @include variables.titulo();
+            color: black;
+        }
+        &-descripcion{
+            @include variables.textoGrandeGris();
+        }
+        &-join{
+            @include variables.rellenoContenedor(black, white, 12px 27px 12px 27px, 40px);
+            &:hover{
+                background-color: variables.$colorFuente3;
+            }
+        }
+        &-imagenes{
+            padding-top: 20px;
+            display: flex;
+            gap: 24px;
+            img{
+                border-radius: 20px;
+                width: 237.53px;
+            }
+        }
+
+    }
+
+}
+
+.footer{
+    padding: 40px;
+    &-contenedorSuperior{
+        @include variables.tipoContenedor1(space-between);
+        &-enlaces{
+            display: flex;
+            gap: 120px;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    @include variables.textoGrandeGris();
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+            h6{
+                font-size: 16px;
+                font-weight: 500
+            }
+        }
+
+        &-titulo{
+            color: black;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        &-articulo{
+            padding-top: 30px;
+            display: flex;
+            gap: 20px;
+            a{
+                @include variables.rellenoContenedor(black, white, 12px 30px 12px 30px, 40px);
+                font-weight: 500
+            }
+            input{
+                padding: 12px 50px 12px 50px;
+                border-radius: 40px;
+                border-color: variables.$colorFuente2;
+                background-color: #fafafa;
+                @include variables.textoGrandeGris();
+                text-align: left;
+                font-size: 18px;
+            }   
+
+        }
+
+        #contenedorJoinFinal {
+            padding-top: 20px;
+            @include variables.tipoContenedor1(left);
+        }
+    }
+    &-contenedorInferior{
+        @include variables.tipoContenedor1(space-between);
+        @include variables.textoGrandeGris();
+        padding-top: 125px;
+        text-transform: uppercase;
+        color: variables.$colorFuente2;
+    }
+}
+
