@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+$bg-default: rgba(225, 234, 249, 1);
+$bg-blue:  rgba(28, 83, 189, 1);
+$bg-dark-blue:  rgba(20, 25, 44, 1);
+$bg-teal:  rgba(0, 138, 146, 1);
+
+
+$text-white: #fff;
+$logo-color: #14192C;
+$roboto-mono: "Roboto Mono", serif;
+$roboto-flex: "Roboto Flex", serif;
+
+
+@mixin position($top: 0, $right: 0, $left: 0, $bottom: 0) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
+  }
+
+@mixin display($items: unset, $content: unset, $direction:  unset, $jcontent: unset){
+    display: flex;
+    align-items: $items;
+    align-content: $content;
+    flex-direction: $direction;
+    justify-content: $jcontent;
+   
+}
+
+@mixin size($width: unset, $height: unset){
+    width: $width;
+    height: $height;
+}

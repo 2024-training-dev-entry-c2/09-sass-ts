@@ -1,304 +1,359 @@
-@use './reset';
-@use './variables' as variables;
+@use "./reset.scss";
+@use "./variables.scss" as variables;
+@use "./theme";
 
 .header {
-  @include variables.container(space-between);
-  padding: 25px;
-  width: 1368px;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  translate: -50%;
 
-  &__actions {
-    @include variables.container-gap(30px);
+  @include variables.position(0,0,0,unset);
+  @include variables.display(center, unset, unset);
+  z-index: 1000;
+  padding: 25px 35px;
+  background: transparent;
+
+  span {
+    transition: color 0.3s ease;
   }
-  
-  &__link {
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  &__button {
-    color: #FFF;
-    background-color: #000;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 17px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
+
+  svg path {
+    transition: fill 0.3s ease;
   }
 }
 
 .menu {
-  @include variables.container-gap(40px);
+  @include variables.display(center, unset, unset);
   list-style: none;
+  gap: 40px;
 
   &__item {
-    font-weight: 600;
-  }
-  
-  &__item, &__icon {
-    @include variables.container-gap(3px);
-  }
-  
-  &__icon {
-    color: variables.$gray;
-  }
-  
-  &__link {
-    color: #000;
-    text-decoration: none;
-  }
-}
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 
-.sub-menu {
-  display: none;
-}
-
-.hero {
-  background-color: hsla(132, 0%, 100%, 1);
-  background-image: radial-gradient(circle at 91% 11%, hsla(13, 100%, 88%, 0) 4.038772213247173%, transparent 37.2265767974114%), radial-gradient(circle at 23% 50%, hsla(323, 100%, 88%, 0.76) 19.04202876606054%, transparent 63.33640956108327%), radial-gradient(circle at 73% 35%, hsla(267.9999999999999, 100%, 88%, 0.8) 21.05892295704486%, transparent 63.33640956108327%);
-  background-blend-mode: normal, normal, normal;
-  padding: 180px;
-  
-  &__data {
-    @include variables.container-gap(50px);
-    max-width: 1368px;
-    margin: 0 auto;
-    padding-inline: 25px;
-  }
-  
-  &__title {
-    font-size: 75px;
-    text-wrap: balance;
-  }
-  
-  &__description {
-    font-size: 23px;
-  }
-  
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  &__button {
-    position: relative;
-    border-radius: 5px;
-    text-decoration: none;
-    width: fit-content;
-    overflow: hidden;
-    padding: 5px;
-    box-sizing: content-box;
-  }
-  
-  &__button {
-    span {
-      background-color: #000;
-      border-radius: 5px;
-      color: #FFF;
-      display: block;
-      padding: 10px;
-      position: relative;
-      z-index: 1;
-    }
-  }
-  
-  &__button {
-    &::after {
-      content: '';
-      width: 1000px;
-      height: 1000px;
-      position: absolute;
-      background-image: linear-gradient(144deg, #fc7a9b, #b47eee);
-      left: -300px;
-      border-radius: 5px;
-      top: -300px;
-      z-index: 0;
-      animation: gradient 2s infinite;
+    &:hover {
+      opacity: 0.7;
     }
   }
 
-  &__requirements {
-    color: variables.$gray;
-    font-size: 16px;
+  &__item-icon {
+    @include variables.display(unset, unset, unset, unset);
+    @include variables.size(100px, 32px);
   }
 }
 
-@keyframes gradient {
-  0% {
-    rotate: 0;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
+.main {
+  @include variables.size(unset, 100vh);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  mix-blend-mode: lighten;
 
-.banner {
-  display: flex;
-  border-radius: 10px;
-  background-color: #FFF;
-  width: 792px;
-  margin: 70px auto;
-  text-decoration: none;
-  color: #000;
-  height: 112px;
-  transition: 0.5s transform;
+  &__logo-right {
+    @include variables.position(0,0,unset,unset);
+    @include variables.size(50vw, 50vw);
+    pointer-events: none;
+    mix-blend-mode: overlay;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-  
-  &__container {
-    padding: 20px;
-  
-    p {
-      span {
-        font-weight: 600;
-        border-bottom: 2px solid variables.$gray;
+    svg {
+      @include variables.size(100%, 100%);
+      transform: translate(50%, -20%);
+      pointer-events: none;
+      path {
+        opacity: 100%;
       }
     }
   }
-  
-  &__video {
-    height: 100%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  
-  &__title {
-    font-size: 17px;
-  }
-}
 
-.bento {
-  max-width: 1368px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
+  &__page-1,
+  &__page-2,
+  &__page-3,
+  &__page-4,
+  &__page-5 {
+    @include variables.display(center, center, unset);
+    @include variables.size(unset, 98vh);
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1.3rem;
 
-  &__item {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #e4d7d7;
-    padding: 20px;
-  
-    &--primary {
-      background-color: #b47eee;
+    > div {
+      max-width: 1200px;
+      width: 40%;
+      margin: 0 auto;
+    }
+    &--title-big {
+      @include variables.display(unset, unset, column);
+      font-size: 7rem;
+      line-height: 1;
+      font-weight: 560;
+    }
+    &--title-medium {
+      @include variables.display(unset, unset, column);
+      font-size: 60px;
+      line-height: 1;
+      font-weight: 560;
+      text-align: left;
+    }
+
+    &--conteiner {
+      @include variables.display(flex-start, center, column);
+      gap: 25px;
+      width: 100%;
+    }
+    &--content {
+      @include variables.display(unset, unset, unset, unset);
+    }
+    &--description-big {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      text-align: left;
+    }
+
+    &-buttons {
+      button.main__button-fill,
+      button.main__button-empty {
+        @include variables.size(161px, 50px);
+        border-radius: 9999px;
+        font-family: variables.$roboto-mono;
+        font-weight: 600;
+        border: 0px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.15s;
+        
+      }
+
+      button.main__button-fill{
+        &:hover{
+          transform: translateY(-1.5px);
+          opacity: .8;
+          transition: 0.15s;
+        }
+      }
+      button.main__button-empty {
+        background-color: transparent;
+        color: variables.$text-white;
+        border: 1px solid #fff;
+      }
     }
   }
 
-  $distributions: (
-    1: 1 / span 6,
-    2: 7 / span 3,
-    3: 10 / span 3,
-    4: 1 / span 3,
-    5: 4 / span 3,
-    6: 7 / span 6
-  );
+  &__page-1 {
+    // background-color: variables.$bg-default;
 
-  @each $key, $value in $distributions {
-    & :nth-child(#{$key}) {
-      grid-column: $value;
+    &-button {
+      @include variables.size(64px, 64px);
+      border-radius: 100%;
+      background-color: rgba(28, 83, 189, 1);
+      border-color: transparent;
+      color: variables.$text-white;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      cursor: pointer;
+      svg{
+
+        @include variables.size(25px, 100%);
+        &:hover{
+          animation: fadeUp 1s;
+         
+        }
+        
+      }
+      &:hover{
+        opacity: 0.8;
+      }
     }
   }
 
-  // @for $i from 1 through 6 {
-  //   & :nth-child(#{$i}) {
-  //     @if $i == 1 {
-  //       grid-column: 1 / 7;
-  //     } @else if $i == 2 {
-  //       grid-column: 7 / 10;
-  //     } @else if $i == 3 {
-  //       grid-column: 10 / 13;
-  //     } @else if $i == 4 {
-  //       grid-column: 1 / 4;
-  //     } @else if $i == 5 {
-  //       grid-column: 4 / 7;
-  //     } @else if $i == 6 {
-  //       grid-column: 7 / 13;
-  //     }
-  //   }
+  &__page-2 {
+    // background-color: variables.$bg-blue;
+    &--title-medium-small {
+      font-size: 20px;
+    }
+  }
+
+  // &__page-3 {
+  //   background-color: variables.$bg-dark-blue;
   // }
 
+  // &__page-4 {
+  //   background-color: variables.$bg-teal;
+  // }
+
+  &__page-5 {
+    // background-color: variables.$bg-default;
+    &--container {
+      @include variables.display(unset, unset, column);
+      gap: 30px;
+    }
+  }
+}
+
+.main-nav {
+  @include variables.position(0,0,unset,unset);
+  @include variables.size(unset, 100vh);
+  padding-right: 35px;
+
+  &__container {
+    @include variables.display(start, unset, column, center);
+    @include variables.size(unset, 100%);
+    gap: 10px;
+    animation-fill-mode: forwards; 
+
+    a {
+      
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover {
+      a {
+        visibility: visible;
+        animation: fadeMenu 0.8s normal; 
+       opacity: 1;
+
+      }
+  
+    }
+
+    &:not(:hover) {
+      a{
+        visibility: visible !important;
+        animation: fadeOut 0.8s forwards; // Animación al quitar el hover
+        opacity: 0.5;
+      }
+    }
+  }
+  &__item {
+    @include variables.display(center, center, row, flex-end);
+    list-style: none;
+    gap: 10px;
+    width: 100%;
+    list-style: none;
+
+    span {
+      @include variables.size(4px, 23px);
+      opacity: 40%;
+      mix-blend-mode: color;
+      border-radius: 100px;
+    }
+
+    a {
+      font-family: variables.$roboto-mono;
+      font-size: 14px;
+      text-decoration: none;
+      visibility: hidden;
+      
+      
+    }
+
+    &--active {
+      a {
+        visibility: visible !important;
+        opacity: 1 !important;
+       
+      }
+      span {
+        mix-blend-mode: normal;
+        opacity: 100% !important;
+      }
+    }
+
+    
+
+  }
+}
+
+.footer {
+  @include variables.position(unset,0,0,0);
+
+  @include variables.display(unset, unset, unset, space-between);
+
+
+
+  padding: 0px 30px 20px 30px;
+  background: transparent;
+  margin: 21px;
+  &__section {
+    @include variables.display(center, unset, unset, unset);
+  }
+
+  &__section-nav {
+    @include variables.display(center, unset, unset, unset);
+    list-style: none;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    svg path {
+      transition: fill 0.3s ease;
+    }
+  }
 }
 
 
-.carousel {
-  padding-block: 70px;
-  background-color: #f5f5f5;
-  position: relative;
+@keyframes fadeUp {
+  0% {
+    transform: translateY(0); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(50px); /* Bajar */
+  }
+  51% {
+    transform: translateY(-100%); /* Aparecer desde arriba */
+  }
+  100% {
+    transform: translateY(0); /* Volver a la posición inicial */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeMenu {
+  from {
+    opacity: 0;
   
-  &__container {
-    padding-bottom: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: scroll;
+  }
+  to {
+    opacity: 1;
+   
+  }
+}
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+
+  }
+  to {
+    opacity: 0;
+ 
+  }
+}
+
+.main__page-1,
+.main__page-2,
+.main__page-3,
+.main__page-4,
+.main__page-5 {
+  &--conteiner {
+    animation: fadeIn 0.8s ease-out;
   }
 
-  &__wrapper {
-    @include variables.container-gap(40px);
-  }
-
-  &__item {
-    @include variables.container-gap(40px);
-    align-items: start;
-    padding: 50px;
-    border-radius: 20px;
-    background-color: #FFF;
-    min-width: 792px;
-
-    p {
-      color: #5c5c5c;
-      font-size: 18px;
-      font-weight: 500;
-    }
-  }
-
-  &__data {
-    @include variables.container-gap(100px);
-  }
-
-  &__arrow {
-    @include variables.container(center);
-    background-color: #0000000a;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-
-    &--prev {
-      rotate: 180deg;
-    }
-  }
-
-  &__arrows {
-    position: absolute;
-    bottom: 70px;
-    right: 500px;
-    @include variables.container(end);
-    margin-top: 20px;
-    margin-right: 120px;
-    gap: 10px;
-  }
-
-  &__author {
-    margin-top: 20px;
-    @include variables.container(start);
-    gap: 20px;
-
-    img { 
-      width: 50px;
-      border-radius: 50%;
-    }
-  }
 }

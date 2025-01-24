@@ -1,16 +1,17 @@
 {
-  "name": "02-sass",
+  "name": "notion-trabajo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sass": "^1.83.4",
-    "typescript": "~5.6.2",
     "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0"
   }
 }

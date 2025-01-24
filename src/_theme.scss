@@ -1,0 +1,186 @@
+@use "./reset.scss";
+
+
+.theme-default {
+  --background: rgba(225, 234, 249, 1);
+  --text: #1c53bd;
+  --logo-main: #1c53bd;
+  --logo-accent: #1c53bd;
+  --font: "Roboto Mono", serif;
+  --text--color: #fff;
+  --button-text: #fff;
+  --button-bg: #1c53bd;
+  --svg-color: rgb(28, 83, 189, 1);
+  --nav-text: #1c53bd;
+  --nav-bg: #1c53bd;
+  --nav-text-hidd:#1c53bd94;
+}
+
+.theme-blue {
+  --background: #1c53bd;
+  --text: white;
+  --logo-main: white;
+  --logo-accent: white;
+  --font: "Roboto Mono", serif;
+  --button-text: #1c53bd;
+  --button-bg: #fff;
+  --svg-color: #fff;
+  --nav-text: #fff;
+  --nav-text-hidd:#ffffff94 ;
+  --nav-bg: #fff;
+}
+
+.theme-dark {
+  --background: rgba(20, 25, 44, 1);
+  --text: white;
+  --logo-main: white;
+  --logo-accent: white;
+  --font: "Roboto Mono", serif;
+  --text--color: #fff;
+  --svg-color: #fff;
+  --nav-text: #fff;
+  --nav-bg: #fff;
+  --nav-text-hidd:#ffffff94 ;
+}
+
+.theme-teal {
+  --background: rgba(0, 138, 146, 1);
+  --text: #14192c;
+  --logo-main: #14192c;
+  --logo-accent: #14192c;
+  --font: "Roboto Mono", serif;
+  --button-text: #fff;
+  --button-bg: #14192c;
+  --svg-color: #5514192c;
+  --nav-text: #14192c;
+  --nav-bg: #14192c;
+  --nav-text-hidd:#14192c94 ;
+}
+
+
+.header {
+  font-family: var(--font);
+  font-size: 14px;
+  span {
+    color: var(--text);
+    transition: color 0.3s ease;
+  }
+
+  
+  .menu__item-icon {
+    svg {
+      path:first-of-type {
+        fill: var(--logo-main);
+        transition: fill 0.3s ease;
+      }
+      // Segunda parte del logo (el símbolo)
+      path:last-of-type {
+        fill: var(--logo-accent);
+        transition: fill 0.3s ease;
+      }
+    }
+  }
+}
+
+.main {
+  &__logo-right {
+    svg {
+      path {
+        fill: var(--svg-color);
+      }
+    }
+  }
+
+  &__page-1,
+  &__page-2,
+  &__page-3,
+  &__page-4,
+  &__page-5 {
+    background-color: var(--background);
+    color: var(--text);
+  }
+
+  &__page-2 {
+    background-color: rgba(28, 83, 189, 1);
+    &--title-medium-small {
+      font-size: 20px;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 15px;
+      button.main__button-fill {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+      button.main__button-empty {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+    }
+  }
+
+  &__page-4 {
+    &-buttons {
+      display: flex;
+      gap: 15px;
+      button.main__button-fill {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+      button.main__button-empty {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+    }
+  }
+}
+
+.main-nav {
+
+  &__item {
+    a {
+      color: var(--nav-text-hidd)  !important;
+      &:hover {
+        color: var(--nav-text) !important;
+      }
+      
+      &:hover + span {
+        background-color: var(--nav-bg) !important;
+        opacity: 100% !important; 
+      }
+      
+    }
+
+    span {
+      background-color: var(--nav-bg);
+    }
+    
+    &--active {
+      span {
+        opacity: 100% !important;
+        background-color: var(--nav-bg) !important;
+      }
+
+      a {
+        color: var(--nav-text) !important;
+      }
+    }
+
+    
+  }
+}
+
+// Estilos del footer
+.footer {
+  &__section-nav {
+    li {
+      font-size: 12px;
+      font-family: "Roboto Mono", serif;
+      color: var(--text--color) !important;
+    }
+    a{
+      color: var(--text);
+    }
+  }
+}
